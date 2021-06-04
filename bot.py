@@ -1,6 +1,5 @@
 #Kubot 코드
 # 모듈
-#jdfklgjkldff
 import discord, os, random, datetime
 from discord.ext import commands, tasks
 from itertools import cycle
