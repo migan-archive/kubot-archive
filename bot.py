@@ -14,7 +14,7 @@ import time
 
 
 # 봇 설정
-token = os.environ["BOT_TOKEN"]
+access_token = os.environ["BOT_TOKEN"]
 bot = commands.Bot(command_prefix="-", intents=discord.Intents.all())
 status = cycle(['-명령어로 명령어 확인', '더욱더 발전하겠습니다', '이 메세지는 10초마다 한번씩 바뀝니다', '디스코드서버를 편리하게'])
 
@@ -344,4 +344,4 @@ def load_chrome_driver():
 
 
 # 봇 실행
-bot.run(token)
+bot.run(access_token)
