@@ -106,7 +106,6 @@ async def 명령어(ctx):
     embed.add_field(name='도움명령어', value='`-명령어`\n`-봇초대`\n`-도와줘`\n`-공식사이트`\n`-공식디스코드`', inline=False)
     embed.add_field(name='놀이 명령어', value='`-안녕`\n`-바보`\n`-놀자`\n`-무`\n`-랜덤숫자`\n`-따라해`', inline=False)
     embed.add_field(name='정보 명령어', value='`-정보`\n`-내프로필`\n`-개발자`\n`-패치내역`\n`-핑`\n`-생일`', inline=False)
-    embed.add_field(name='음악 명령어', value='`-입장`\n`-퇴장`\n`-url플레이\n`-일시정지`\n`-재생`\n`-플레이종료`\n`-플레이`')
     embed.add_field(name='관리자 전용 명령어', value='`-청소`\n`-킥`\n`-밴`')
     embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/979c90e1d75652e72eea393329a08b57.webp?size=1024")
     await ctx.send(embed=embed)
@@ -131,12 +130,13 @@ async def 패치내역(ctx):
     embed.add_field(name='버전 2.8', value='-채팅청소 삭제(3.0 버전에서 롤백, 관리자 권한없이도 채팅청소되는 버그)')
     embed.add_field(name='버전 2.9', value='-개발자 명령어에서 개발자 이름 변경', inline=False)
     embed.add_field(name='버전 3.0', value='코드 처음부터 작성, 청소 기능 롤백, 킥, 밴 추가, 10초마다 봇상태 바뀌게 수정, 음악 명령어 일부 롤백', inline=False)
+    embed.add_field(name='버전 3.1', value='음악 관련 명령어 삭제(heroku 에서 안돌아감)', inline=False)
     embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/979c90e1d75652e72eea393329a08b57.webp?size=1024")
     await ctx.send(embed=embed)
 
 @bot.command()
 async def 정보(ctx):
-    embed = discord.Embed(color=0x00FF21, title="버전 3.0.5(new code)", description="당신의 디스코드방을 편리하게 만듭니다.\n[공식 디스코드 바로가기](https://discord.gg/S8pN4eD)[공식 사이트 바로가기](https://kubot.netlify.app/)")
+    embed = discord.Embed(color=0x00FF21, title="버전 3.1(music code delete)", description="당신의 디스코드방을 편리하게 만듭니다.\n[공식 디스코드 바로가기](https://discord.gg/S8pN4eD)[공식 사이트 바로가기](https://kubot.netlify.app/)")
     embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/979c90e1d75652e72eea393329a08b57.webp?size=1024")
     await ctx.send(embed=embed)
 
@@ -217,130 +217,6 @@ async def 밴(ctx, member : discord.Member, *, reason=None):
         embed = discord.Embed(color=0x00FF21, title="멤버 차단", description=f"{user.name}님, 해당작업은 관리자 권한을 가져야만 가능 합니다.")
         embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/979c90e1d75652e72eea393329a08b57.webp?size=1024")
         await ctx.send(embed=embed)
-
-@bot.command()
-async def 입장(ctx):
-    try:
-        global vc
-        vc = await ctx.message.author.voice.channel.connect()
-        embed = discord.Embed(color=0x00FF21, title="음성채널 입장", description="음성채널의 입장하였습니다.")
-        embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/979c90e1d75652e72eea393329a08b57.webp?size=1024")
-        await ctx.send(embed=embed)
-    except:
-        try:
-            await vc.move_to(ctx.message.author.voice.channel)
-            embed = discord.Embed(color=0x00FF21, title="음성채널 입장", description="음성채널의 입장하였습니다.")
-            embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/979c90e1d75652e72eea393329a08b57.webp?size=1024")
-            await ctx.send(embed=embed)
-        except:
-            embed = discord.Embed(color=0x00FF21, title="음성채널 입장", description="음성채널에 유저가 없습니다.")
-            embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/979c90e1d75652e72eea393329a08b57.webp?size=1024")
-            await ctx.send(embed=embed)
-
-@bot.command()
-async def 퇴장(ctx):
-    try:
-        await vc.disconnect()
-        embed = discord.Embed(color=0x00FF21, title="음성채널 퇴장", description="음성채널에서 퇴장하였습니다.")
-        embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/979c90e1d75652e72eea393329a08b57.webp?size=1024")
-        await ctx.send(embed=embed)
-    except:
-        embed = discord.Embed(color=0x00FF21, title="음성채널 퇴장", description="음성채널에서 이미 퇴장하였습니다.")
-        embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/979c90e1d75652e72eea393329a08b57.webp?size=1024")
-        await ctx.send(embed=embed)
-
-@bot.command()
-async def url플레이(ctx, *, url):
-    YDL_OPTIONS = {'format': 'bestaudio','noplaylist':'True'}
-    FFMPEG_OPTIONS = {'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5', 'options': '-vn'}
-
-    if not vc.is_playing():
-        with YoutubeDL(YDL_OPTIONS) as ydl:
-            info = ydl.extract_info(url, download=False)
-        URL = info['formats'][0]['url']
-        vc.play(FFmpegPCMAudio(URL, **FFMPEG_OPTIONS))
-        embed = discord.Embed(title= "노래 재생", description = "현재 " + url + "을(를) 재생하고 있습니다.", color = 0x00FF21)
-        embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/979c90e1d75652e72eea393329a08b57.webp?size=1024")
-        await ctx.send(embed=embed)
-    else:
-        embed = discord.Embed(title= "노래 재생", description = "이미 플레이중입니다.", color = 0x00FF21)
-        embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/979c90e1d75652e72eea393329a08b57.webp?size=1024")
-        await ctx.send(embed=embed) 
-
-@bot.command()
-async def 일시정지(ctx):
-    if vc.is_playing():
-        vc.pause()
-        embed = discord.Embed(title= "일시정지", description ="일시정지 했습니다.", color = 0x00FF21)
-        embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/979c90e1d75652e72eea393329a08b57.webp?size=1024")
-        await ctx.send(embed=embed)
-    else:
-        embed = discord.Embed(title= "일시정지", description ="현재 플레이가 없거나, 이미 일시정지를 했습니다.", color = 0x00FF21)
-        embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/979c90e1d75652e72eea393329a08b57.webp?size=1024")
-        await ctx.send(embed=embed)
-
-@bot.command()
-async def 재생(ctx):
-    try:
-        vc.resume()
-    except:
-        embed = discord.Embed(title= "다시플레이", description="지금 플레이가 없거나, 이미 다시시작 했습니다.", color = 0x00ff00)
-        embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/979c90e1d75652e72eea393329a08b57.webp?size=1024")
-        await ctx.send(embed=embed)
-    else:
-        embed = discord.Embed(title= "다시플레이", description="다시 재생했습니다.", color = 0x00FF21)
-        embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/979c90e1d75652e72eea393329a08b57.webp?size=1024")
-        await ctx.send(embed=embed)
-
-@bot.command()
-async def 플레이종료(ctx):
-    if vc.is_playing():
-        vc.stop()
-        embed = discord.Embed(title= "플레이 종료", description="플레이를 종료했습니다.", color = 0x00FF21)
-        embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/979c90e1d75652e72eea393329a08b57.webp?size=1024")
-        await ctx.send(embed=embed)
-    else:
-        embed = discord.Embed(title= "플레이 종료", description="플레이가 없거나, 이미 플레이를 종료하였습니다..", color = 0x00ff00)
-        embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/979c90e1d75652e72eea393329a08b57.webp?size=1024")
-        await ctx.send(embed=embed)
-
-@bot.command()
-async def 플레이(ctx, *, msg):
-    if not vc.is_playing():
-        global entireText
-        YDL_OPTIONS = {'format': 'bestaudio', 'noplaylist':'True'}
-        FFMPEG_OPTIONS = {'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5', 'options': '-vn'}
-            
-        
-        driver = load_chrome_driver()
-        driver.get("https://www.youtube.com/results?search_query="+msg+"+lyrics")
-        source = driver.page_source
-        bs = BeautifulSoup(source, 'lxml')
-        entire = bs.find_all('a', {'id': 'video-title'})
-        entireNum = entire[0]
-        entireText = entireNum.text.strip()
-        musicurl = entireNum.get('href')
-        url = 'https://www.youtube.com'+musicurl 
-
-        with YoutubeDL(YDL_OPTIONS) as ydl:
-            info = ydl.extract_info(url, download=False)
-        URL = info['formats'][0]['url']
-        await ctx.send(embed = discord.Embed(title= "노래 재생", description = "현재 " + entireText + "을(를) 재생하고 있습니다.", color = 0x00ff00))
-        vc.play(FFmpegPCMAudio(URL, **FFMPEG_OPTIONS))
-    else:
-        await ctx.send("이미 노래가 재생 중이라 노래를 재생할 수 없어요!")
-
-def load_chrome_driver():
-      
-    options = webdriver.ChromeOptions()
-
-    options.binary_location = os.getenv('GOOGLE_CHROME_BIN')
-
-    options.add_argument('--headless')
-    # options.add_argument('--disable-gpu')
-    options.add_argument('--no-sandbox')
-
-    return webdriver.Chrome(executable_path=str(os.environ.get('CHROME_EXECUTABLE_PATH')), chrome_options=options)
 
 
 # 봇 실행
