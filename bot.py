@@ -3,14 +3,6 @@
 import discord, os, random, datetime
 from discord.ext import commands, tasks
 from itertools import cycle
-from youtube_dl import YoutubeDL
-from bs4 import BeautifulSoup
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from discord.utils import get
-from discord import FFmpegPCMAudio
-import asyncio
-import time
 
 
 # 봇 설정
@@ -28,9 +20,6 @@ async def on_ready():
 @tasks.loop(seconds=10)
 async def change_status():
     await bot.change_presence(activity=discord.Game(next(status)))
-
-if not discord.opus.is_loaded():
-    discord.opus.load_opus('opus')
 
 
 #봇 커맨드
