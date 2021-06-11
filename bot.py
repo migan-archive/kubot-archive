@@ -102,6 +102,7 @@ async def 명령어(ctx):
 @bot.command()
 async def 패치내역(ctx):
     embed = discord.Embed(color=0x00FF21, title="패치 내역", description="[패치 내역 보러 가기](https://kubot.netlify.app/log.html)")
+    embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/979c90e1d75652e72eea393329a08b57.webp?size=1024")
     await ctx.send(embed=embed)
 
 @bot.command()
