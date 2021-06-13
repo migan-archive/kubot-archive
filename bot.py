@@ -17,7 +17,7 @@ Uptime.uptimeset()
 async def on_command_error(ctx, error):
     if isinstance(error, CommandNotFound):
         embed = discord.Embed(title = ":x:Error!", description = "해당 명령어는 존재하지 않습니다.\n-명령어으로 명령어를 찾아주세요.", color = 0x00FF21)
-        embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/979c90e1d75652e72eea393329a08b57.webp?size=1024")
+        embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
         await ctx.send(embed=embed)
         return
     raise error
@@ -48,7 +48,7 @@ async def 안녕(ctx):
 @bot.command()
 async def 핑(ctx):
     embed = discord.Embed(title='퐁!', description=str(bot.latency) + 'ms', color=0x00FF21)
-    embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/979c90e1d75652e72eea393329a08b57.webp?size=1024")
+    embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
     await ctx.send(embed=embed)
 
 @bot.command()
@@ -191,6 +191,7 @@ async def 업타임(ctx):
     minitues = uptime[1]
     seconds = uptime[2].split(".")[0]
     embed = discord.Embed(color = 0x00FF21, title=":up:업타임", description=f"현재 업타임은 {hours}시간 {minitues}분 {seconds}초 입니다.")
+    embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
     await ctx.send(embed=embed)
 
 
