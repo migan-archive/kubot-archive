@@ -190,7 +190,7 @@ async def 업타임(ctx):
     hours = uptime[0]
     minitues = uptime[1]
     seconds = uptime[2].split(".")[0]
-    embed = discord.Embed(title="업타임", description=f"현재 업타임은 {hours}시간 {minitues}분 {seconds}초 입니다.")
+    embed = discord.Embed(color = 0x00FF21, title=":up:업타임", description=f"현재 업타임은 {hours}시간 {minitues}분 {seconds}초 입니다.")
     await ctx.send(embed=embed)
 
 
