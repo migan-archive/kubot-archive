@@ -17,7 +17,7 @@ class Help(commands.Cog):
             await ctx.send(embed=embed)
 
         @bot.command(name="정보")
-        async def in(ctx):
+        async def i(ctx):
             embed = discord.Embed(color=0x00FF21, title="Kubot 의 정보")
             embed.add_field(name='버전', value='Version 21.6.18/V3.16', inline=False)
             embed.add_field(name='당신의 디스코드방을 편리하게 만듭니다.', value='[공식 디스코드 바로가기](https://discord.gg/S8pN4eD) [공식 사이트 바로가기](https://kubot.netlify.app/)')
