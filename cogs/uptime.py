@@ -8,8 +8,8 @@ class uptime(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command()
-    async def 업타임(ctx):
+    @commands.command(name="업타임")
+    async def uptime(self, ctx):
         uptime = str(Uptime.uptime()).split(":")
         hours = uptime[0]
         minitues = uptime[1]
