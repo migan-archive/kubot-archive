@@ -2,11 +2,11 @@ import discord
 from discord.ext import commands
 
 
-class Admin(commands.Cog):
+class Admin(commands.Cog, help="관리"):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name="청소")
+    @commands.command(name="청소", help="채팅청소를 해줍니다.(만약 채팅 갯수 설정 안하면 5개)")
     async def clear(self, ctx, amount=5):
         global user
         global permission
@@ -24,7 +24,7 @@ class Admin(commands.Cog):
             embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
             await ctx.send(embed=embed)
 
-    @commands.command(name="킥")
+    @commands.command(name="킥", help="사용자를 추방합니다.")
     async def kick(self, ctx, member : discord.Member, *, reason=None):
 
         if permission is True:
@@ -38,7 +38,7 @@ class Admin(commands.Cog):
             embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
             await ctx.send(embed=embed)
 
-    @commands.command(name="밴")
+    @commands.command(name="밴", help="사용자를 차단합니다.")
     async def ban(self, ctx, member : discord.Member, *, reason=None):
 
         if permission is True:
