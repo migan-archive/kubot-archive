@@ -15,7 +15,6 @@ class Core(commands.Cog, name="일반"):
 
     @commands.command(name="안녕", help="인사를 해줍")
     async def Hello(self, ctx):
-        global user
         user = ctx.author
         await ctx.send(random.choice(['안녕', 'hi', '안녕하세요', 'hello', f'{user.name}님 안녕하세요!']))
 
@@ -29,6 +28,7 @@ class Core(commands.Cog, name="일반"):
 
     @commands.command(name="내프로필", help="당신의 프로필을 보여줍니다.")
     async def myprofile(self, ctx):
+        user = ctx.author
         date = datetime.datetime.utcfromtimestamp(((int(user.id) >> 22) + 1420070400000) / 1000)
         embed = discord.Embed(color=0x00FF21, title=f"{user.name}님의 프로필")
         embed.set_thumbnail(url=ctx.author.avatar_url)
