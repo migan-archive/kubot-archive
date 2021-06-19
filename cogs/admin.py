@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 
 
-class Admin(commands.Cog, help="관리"):
+class Admin(commands.Cog, name="관리"):
     def __init__(self, bot):
         self.bot = bot
 
