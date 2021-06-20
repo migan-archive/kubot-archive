@@ -34,7 +34,6 @@ class Core(commands.Cog, name="일반"):
         embed.set_thumbnail(url=ctx.author.avatar_url)
         embed.add_field(name='가입일', value=f'{date.year}년{date.month}월{date.day}일', inline=False)
         embed.add_field(name='이름', value=f'{user.name}', inline=False)
-        embed.add_field(name='아이디', value=f'{user.id}', inline=False)
         embed.add_field(name='닉네임', value=f'{user.display_name}', inline=False)
         embed.add_field(name='상태', value=f'{user.status}')
         embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
