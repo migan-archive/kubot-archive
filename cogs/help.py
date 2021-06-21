@@ -16,7 +16,7 @@ class Help(commands.Cog, name="도움"):
     @commands.command(name="도움말", help="이봇의 사용법을 알려줍니다.")
     async def hellp(self, ctx):
         embed = discord.Embed(color=0x00FF21, title="필요한게 있으면 여기 와주세요.", description="[공식디스코드 바로가기](https://discord.gg/S8pN4eD)\n 봇 접두사=**`k!`**, **`ㅋ`**, **`쿠봇아 `**, **`쿠`**")
-        embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/844901121557790733/856360393831743518/a97aac8b4f8d5cf9.png")
+        embed.set_thumbnail(url="https://cdn.discordapp.com/avatars/415135882006495242/8c4f113dac8214585edab6ead59ac568.webp?size=1024")
         embed.add_field(name='도움 명령어', value='`봇초대`, `도움말`, `공식사이트`,`공식디스코드`', inline=False)
         embed.add_field(name='놀이 명령어', value='`안녕`, `따라해`, `놀자`, `바보`', inline=False)
         embed.add_field(name='정보 명령어', value='`정보`, `내프로필`, `개발자`, `핑`, `업타임`, `서버수`', inline=False)
