@@ -36,13 +36,13 @@ class Core(commands.Cog, name="일반"):
         embed.add_field(name='이름', value=f'{user.name}', inline=False)
         embed.add_field(name='닉네임', value=f'{user.display_name}', inline=False)
         embed.add_field(name='상태', value=f'{user.status}')
-        embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
+        embed.set_footer(text="bot made by. 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
         await ctx.send(embed=embed)
 
     @commands.command(name="봇초대", help="봇초대 링크를 줍니다.")
     async def invite(self, ctx):
         embed = discord.Embed(color=0x00FF21, title="봇초대 링크", description="[초대하러 가기](https://discord.com/oauth2/authorize?client_id=704999866094452816&permissions=8&scope=bot)")
-        embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
+        embed.set_footer(text="bot made by. 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
         await ctx.send(embed=embed)
 
     
@@ -52,8 +52,14 @@ class Core(commands.Cog, name="일반"):
         hours = uptime[0]
         minitues = uptime[1]
         seconds = uptime[2].split(".")[0]
-        embed = discord.Embed(color = 0x00FF21, title=":up:업타임", description=f"현재 업타임은 {hours}시간 {minitues}분 {seconds}초 입니다.")
-        embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
+        embed = discord.Embed(color=0x00FF21, title=":up:업타임", description=f"현재 업타임은 {hours}시간 {minitues}분 {seconds}초 입니다.")
+        embed.set_footer(text="bot made by. 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
+        await ctx.send(embed=embed)
+
+    @commands.command(name="서버수", help="이봇이 들어간 서버수를 알려줍니다.")
+    async def server(self, ctx):
+        embed = discord.Embed(color=0x00FF21, title="Kubot의 서버수", description=f"현재 Kubot의 서버수는 {len(self.bot.guilds)}서버 입니다.")
+        embed.set_footer(text="bot made by. 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
         await ctx.send(embed=embed)
 
 
