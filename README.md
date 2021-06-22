@@ -56,9 +56,45 @@ SOFTWARE.
 
 # 사용하실때
 사용하살때 가이드입니다.
+
 ## 라이선스
 - 해당봇은 MIT 라이선스를 사용중입니다.
 - 아무렇게나 써도됩니다.
+
+## 파이썬 설치법
+1. 윈도우라면 python 공식 홈페이지에 가서 다운받으십시오(path는 꼭! 체크)
+2. 만약 리눅스라면 기본적으로 깔려있을껍니다. 만약 아니라면 아래에 있는 명령어를 치십시오.
+```
+sudo apt update
+```
+그리고
+```
+sudo apt install python3
+```
+를 쳐주세요.
+
+그리고 pip도 깔아야 합니다.
+```
+sudo apt install python3-pip
+```
+
+## 라이브러리 설치법
+1. discord.py
+```
+1. pip install discord
+2. pip install discord.py==1.7.2
+```
+
+2. datetime
+
+```
+pip install datetime==4.3
+```
+
+3. Dtime
+```
+pip install Dtime==0.1
+```
 
 ## 사용법
 1. bot.py를 여셔서 access_token 부분에 아래에 있는 것은 없애주시고 토큰을 넣어주세요.
