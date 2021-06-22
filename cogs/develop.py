@@ -10,7 +10,7 @@ class Develop(commands.Cog, name="개발"):
     async def pythonver(self, ctx):
         await ctx.reply("Kubot은 python 3.8.5 버전을 사용중입니다.")
 
-    @commands.command(name="사용된모듈", help="이봇에 사용된 모듈을 알려줍니다.")
+    @commands.command(name="사용된모듈", help="이봇에 사용된 모듈을 알려줍니다.", aliases=["모듈", "모듈버전"])
     async def modulever(self, ctx):
         embed = discord.Embed(color=0x00FF21, title="모듈", description="사용된 모듈")
         embed.add_field(name='discord.py', value='버전=1.7.2', inline=False)

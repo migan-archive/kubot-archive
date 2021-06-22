@@ -21,7 +21,7 @@ class Help(commands.Cog, name="도움"):
         embed.add_field(name='놀이 명령어', value='**`안녕`**, **`따라해`**, **`놀자`**, **`바보`**', inline=False)
         embed.add_field(name='정보 명령어', value='**`정보`**, **`내프로필`**, **`개발자`**, **`핑`**, **`업타임`**, **`서버수`**', inline=False)
         embed.add_field(name='관리자 전용 명령어', value='**`청소`**, **`킥`**, **`밴`**', inline=False)
-        embed.add_field(name='개발 명령어', value='**`파이썬버전(다른명령어 같은기능:파버, 파이썬)`**, **`모듈`**, **`소스코드`**')
+        embed.add_field(name='개발 명령어', value='**`파이썬버전(다른명령어 같은기능:파버, 파이썬)`**, **`사용된모듈(다른명령어 같은기능:모듈, 모듈버전)`**, **`소스코드`**')
         embed.set_footer(text="bot made by. 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
         await ctx.send(embed=embed)
 
