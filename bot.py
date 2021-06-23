@@ -50,6 +50,7 @@ async def on_ready():
     change_status.start()
     print("--------------------------------------") 
     print(f"{bot.user.name}으로 로그인 하셨습니다.")
+    print("라이선스=MIT")
     print("--------------------------------------")
 
 @tasks.loop(seconds=10)

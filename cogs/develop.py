@@ -48,6 +48,12 @@ class Develop(commands.Cog, name="개발"):
         embed.set_footer(text="bot made by. 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
         await ctx.reply(embed=embed)
 
+    @commands.command(name="라이선스", help="해당 봇의 라이선스를 알려줍니다.")
+    async def license(self, ctx):
+        embed = discord.Embed(color=0x00FF21, title="Kubot의 라이선스", description="해당봇은 MIT라이선스를 사용하고있습니다.")
+        embed.set_footer(text="bot made by. 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
+        await ctx.reply(embed=embed)
+
 
 
 def setup(bot):

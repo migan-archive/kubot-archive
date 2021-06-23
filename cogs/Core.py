@@ -81,7 +81,7 @@ class Core(commands.Cog, name="일반"):
 
     @commands.command(name="서버수", help="이봇이 들어간 서버수를 알려줍니다.")
     async def server(self, ctx):
-        embed = discord.Embed(color=0x00FF21, title="Kubot의 서버수", description=f"현재 Kubot의 서버수는 {len(self.bot.guilds)}서버 입니다.")
+        embed = discord.Embed(color=0x00FF21, title="Kubot의 서버수", description=f"현재 Kubot의 서버수는 {len(self.bot.guilds)}서버 입니다.\n현재 한디리에서 Kubot서버가 1서버로 표기되고있습니다.")
         embed.set_footer(text="bot made by. 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
         await ctx.reply(embed=embed)
 
