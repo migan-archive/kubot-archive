@@ -21,7 +21,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 '''
-import discord
+import discord, asyncio
 from discord.ext import commands
 
 
@@ -35,6 +35,8 @@ class Develop(commands.Cog, name="개발"):
 
     @commands.command(name="사용된모듈", help="이봇에 사용된 모듈을 알려줍니다.", aliases=["모듈", "모듈버전"])
     async def modulever(self, ctx):
+        await ctx.reply("Loding...")
+        await asyncio.sleep(5)
         embed = discord.Embed(color=0x00FF21, title="모듈", description="사용된 모듈")
         embed.add_field(name='discord.py', value='버전=1.7.2', inline=False)
         embed.add_field(name='datetime', value='버전=4.3', inline=False)
@@ -44,6 +46,8 @@ class Develop(commands.Cog, name="개발"):
 
     @commands.command(name="소스코드", help="이 봇의 코드를 보여줍니다.")
     async def sorce(self, ctx):
+        await ctx.reply("Loding...")
+        await asyncio.sleep(5)
         embed = discord.Embed(color=0x00FF21, title='소스코드', description='봇의 코드입니다. [깃허브로 가기](https://github.com/siwoo131/kubot-code)')
         embed.set_footer(text="bot made by. 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
         await ctx.reply(embed=embed)
@@ -53,7 +57,6 @@ class Develop(commands.Cog, name="개발"):
         embed = discord.Embed(color=0x00FF21, title="Kubot의 라이선스", description="해당봇은 MIT라이선스를 사용하고있습니다.")
         embed.set_footer(text="bot made by. 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
         await ctx.reply(embed=embed)
-
 
 
 def setup(bot):
