@@ -21,9 +21,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 '''
-import discord, random, asyncio
+import discord, random, asyncio, datetime, time
 from discord.ext import commands
-import datetime
 from Dtime import Uptime
 
 
@@ -31,6 +30,15 @@ Uptime.uptimeset()
 class Core(commands.Cog, name="일반"):
     def __init__(self, bot):
         self.bot = bot
+
+    @commands.command(name="핑", help="이봇의 핑을 알려줍니다.")
+    async def ping(self, ctx):
+        before = time.monotonic()
+        message = await ctx.send("Loding")
+        ping = (time.monotonic() - before) * 1000
+        embed = discord.Embed(color=0x00FF21, title=":ping_pong:퐁!",  description=f"{int(ping)}ms")
+        embed.set_footer(text="bot made by. #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
+        await message.edit(embed=embed)
 
     @commands.command(name="따라해", help="이용자가 입력한걸 다시 해줌")
     async def text(self, ctx, *, text):
