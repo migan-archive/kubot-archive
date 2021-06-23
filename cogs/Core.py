@@ -37,7 +37,7 @@ class Core(commands.Cog, name="일반"):
         message = await ctx.send("Loding")
         ping = (time.monotonic() - before) * 1000
         embed = discord.Embed(color=0x00FF21, title=":ping_pong:퐁!",  description=f"{int(ping)}ms")
-        embed.set_footer(text="bot made by. #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
+        embed.set_footer(text="bot made by. 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
         await message.edit(embed=embed)
 
     @commands.command(name="따라해", help="이용자가 입력한걸 다시 해줌")
