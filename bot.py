@@ -53,9 +53,6 @@ async def on_ready():
     print("Licence = MIT")
     print("--------------------------------------")
 
-    if not discord.opus.is_loaded():
-            discord.opus.load_opus('opus')
-
 @tasks.loop(seconds=10)
 async def change_status():
     await bot.change_presence(activity=discord.Game(next(status)))
