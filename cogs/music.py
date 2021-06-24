@@ -72,7 +72,7 @@ class Music(commands.Cog, name="음악"):
             embed.set_footer(text="bot made by. 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
             await ctx.send(embed=embed)
 
-    @commands.command(name="링크플래이", help="url주소로 플레이합니다.")
+    @commands.command(name="링크플레이", help="url주소로 플레이합니다.")
     async def uplay(self, ctx, *, url):
         YDL_OPTIONS = {'format': 'bestaudio','noplaylist':'True'}
         FFMPEG_OPTIONS = {'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5', 'options': '-vn'}
@@ -105,7 +105,7 @@ class Music(commands.Cog, name="음악"):
             await ctx.send(embed=embed)
 
     @commands.command(name="재생", help="노래를 다시 재생합니다.")
-    async def resume(ctx):
+    async def resume(self, ctx):
         try:
             vc.resume()
         
@@ -117,6 +117,19 @@ class Music(commands.Cog, name="음악"):
         else:
             embed = discord.Embed(title= "다시플레이", description="다시 재생했습니다.", color = 0x00FF21)
             embed.set_footer(text="bot made by. 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
+            await ctx.send(embed=embed)
+
+    @commands.command(name="플레이종료", help="노래를 종료합니다.")
+    async def stop(self, ctx):
+        if vc.is_playing():
+            vc.stop()
+            embed = discord.Embed(title= "플레이 종료", description="플레이를 종료했습니다.", color = 0x00FF21)
+            embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/979c90e1d75652e72eea393329a08b57.webp?size=1024")
+            await ctx.send(embed=embed)
+        
+        else:
+            embed = discord.Embed(title= "플레이 종료", description="플레이가 없거나, 이미 플레이를 종료하였습니다..", color = 0x00ff00)
+            embed.set_footer(text="봇만든이 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/979c90e1d75652e72eea393329a08b57.webp?size=1024")
             await ctx.send(embed=embed)
 
 
