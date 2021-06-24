@@ -21,7 +21,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 '''
-import discord, random, asyncio, datetime, time
+import discord, random, datetime, time
 from discord.ext import commands
 from Dtime import Uptime
 
@@ -34,7 +34,7 @@ class Core(commands.Cog, name="일반"):
     @commands.command(name="핑", help="이봇의 핑을 알려줍니다.")
     async def ping(self, ctx):
         before = time.monotonic()
-        message = await ctx.send("Loding")
+        message = await ctx.reply("측정중...")
         ping = (time.monotonic() - before) * 1000
         embed = discord.Embed(color=0x00FF21, title=":ping_pong:퐁!",  description=f"{int(ping)}ms")
         embed.set_footer(text="bot made by. 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
@@ -59,8 +59,7 @@ class Core(commands.Cog, name="일반"):
 
     @commands.command(name="내프로필", help="당신의 프로필을 보여줍니다.")
     async def myprofile(self, ctx):
-        await ctx.reply("Loding...")
-        await asyncio.sleep(5)
+        message = await ctx.reply("유저 프로필 가져오는중...")
         user = ctx.author
         date = datetime.datetime.utcfromtimestamp(((int(user.id) >> 22) + 1420070400000) / 1000)
         embed = discord.Embed(color=0x00FF21, title=f"{user.name}님의 프로필")
@@ -70,7 +69,7 @@ class Core(commands.Cog, name="일반"):
         embed.add_field(name='닉네임', value=f'{user.display_name}', inline=False)
         embed.add_field(name='상태', value=f'{user.status}')
         embed.set_footer(text="bot made by. 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
-        await ctx.reply(embed=embed)
+        await message.edit(embed=embed)
 
     @commands.command(name="봇초대", help="봇초대 링크를 줍니다.")
     async def invite(self, ctx):
@@ -91,11 +90,10 @@ class Core(commands.Cog, name="일반"):
 
     @commands.command(name="서버수", help="이봇이 들어간 서버수를 알려줍니다.")
     async def server(self, ctx):
-        await ctx.reply("Loding...")
-        await asyncio.sleep(5)
+        message = await ctx.reply("Loading")
         embed = discord.Embed(color=0x00FF21, title="Kubot의 서버수", description=f"현재 Kubot의 서버수는 {len(self.bot.guilds)}서버 입니다.\n현재 한디리에서 Kubot서버가 1서버로 표기되고있습니다.")
         embed.set_footer(text="bot made by. 미간 #8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
-        await ctx.reply(embed=embed)
+        await message.edit(embed=embed)
 
 
 def setup(bot):
