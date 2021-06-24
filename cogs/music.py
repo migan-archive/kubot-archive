@@ -37,8 +37,6 @@ class Music(commands.Cog, name="음악"):
     def __init__(self, bot):
         self.bot = bot
 
-        if not discord.opus.is_loaded():
-            discord.opus.load_opus('opus')
 
     @commands.command(name="입장", help="음성채널에 입장합니다.")
     async def join(self, ctx):
