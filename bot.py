@@ -27,7 +27,7 @@ from itertools import cycle
 from discord.ext.commands import CommandNotFound
 
 
-bot = commands.Bot(command_prefix=['k!', 'ㅋ', '쿠봇아 ', '쿠'], intents=discord.Intents.all())
+bot = commands.Bot(command_prefix=['k!', '쿠봇아 ', '쿠'], intents=discord.Intents.all())
 access_token = os.environ["BOT_TOKEN"]
 status = cycle(['k!도움말로 명령어 확인', '더욱더 발전하겠습니다', '이 메세지는 10초마다 한번씩 바뀝니다', '디스코드서버를 편리하게'])
 
@@ -51,6 +51,7 @@ async def on_ready():
     print("--------------------------------------") 
     print(f"{bot.user.name}으로 로그인 하셨습니다.")
     print("Licence = MIT")
+    print("봇 원작자 = 미간#8269")
     print("--------------------------------------")
 
 @tasks.loop(seconds=10)
