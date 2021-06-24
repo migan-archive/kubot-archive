@@ -23,3 +23,6 @@
 #ide ignore
 .vscode
 .idea
+
+#bot run ignore
+__pycache__
