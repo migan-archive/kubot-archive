@@ -31,10 +31,12 @@ class Core(commands.Cog, name="일반"):
     def __init__(self, bot):
         self.bot = bot
 
-
     @commands.command(name="따라해", help="이용자가 입력한걸 다시 해줌")
     async def text(self, ctx, *, text):
-        await ctx.send(text)
+        if text in "@everyone":
+            await ctx.send("해당메세지엔 에브리원이 들어가있어 불가합니다.")      
+        else:
+            await ctx.send(text)
 
     @commands.command(name="안녕", help="인사를 해줍")
     async def Hello(self, ctx):
