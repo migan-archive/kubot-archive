@@ -96,6 +96,10 @@ class Core(commands.Cog, name="일반"):
         embed.set_footer(text="bot made by. 미간#8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
         await message.edit(embed=embed)
 
+    @commands.command(name="ㅋㅋ", help="웃습니다.")
+    async def lol(self, ctx):
+        await ctx.send("ㅋㅋㅋㅋ")
+
 
 def setup(bot):
     bot.add_cog(Core(bot))
