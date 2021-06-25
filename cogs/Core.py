@@ -101,7 +101,7 @@ class Core(commands.Cog, name="일반"):
         await ctx.send("ㅋㅋㅋㅋ")
 
     @commands.command(name="랜덤숫자", help="랜덤으로 1에서 10000000000000 까지 씁니다.")
-    async def randint(ctx):
+    async def randint(self, ctx):
         await ctx.send(random.randint(1, 10000000000000))
 
     @commands.command(name="야", help="직접해보셈")
