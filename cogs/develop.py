@@ -32,7 +32,7 @@ class Develop(commands.Cog, name="개발"):
     @commands.command(name="파이썬버전", help="이봇에 사용된 파이썬 버전을 알려줍니다.", aliases=["파버", "파이썬"])
     async def pythonver(self, ctx):
         message = await ctx.reply("파이썬 버전 불러오는중...")
-        await message.edit("Kubot은 python 3.8.5 버전을 사용중입니다.")
+        await message.edit(content="Kubot은 python 3.8.5 버전을 사용중입니다.")
 
     @commands.command(name="사용된모듈", help="이봇에 사용된 모듈을 알려줍니다.", aliases=["모듈", "모듈버전"])
     async def modulever(self, ctx):
