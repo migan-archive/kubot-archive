@@ -39,12 +39,15 @@ class Help(commands.Cog, name="도움"):
     @commands.command(name="도움말", help="이봇의 사용법을 알려줍니다.")
     async def hellp(self, ctx):
         embed = discord.Embed(color=0x00FF21, title="필요한게 있으면 여기 와주세요.", description="[공식디스코드 바로가기](https://discord.gg/S8pN4eD)\n 봇 접두사=**`k!`**, **`쿠봇아 `**, **`쿠`**")
+        embed.add_field(name='명령어', value='명령어를 볼려면 k!help를 쳐주세요.')
+        '''
         embed.set_thumbnail(url="https://cdn.discordapp.com/avatars/415135882006495242/40b3f2e3fbb710522517b0e14dfb751b.webp?size=1024")
         embed.add_field(name='도움 명령어', value='**`봇초대`**, **`도움말`**, **`사이트`**, **`디스코드`**', inline=False)
         embed.add_field(name='놀이 명령어', value='**`안녕`**, **`따라해`**, **`놀자`**, **`바보`**, **`ㅋㅋ`**', inline=False)
         embed.add_field(name='정보 명령어', value='**`정보`**, **`내프로필`**, **`개발자`**, **`핑`**, **`업타임`**, **`서버수`**', inline=False)
         embed.add_field(name='관리자 전용 명령어', value='**`청소`**, **`킥`**, **`밴`**', inline=False)
         embed.add_field(name='개발 명령어', value='**`파이썬버전(파버, 파이썬)`**, **`사용된모듈(모듈, 모듈버전)`**, **`소스코드(코드)`**, **`라이선스(라이센스)`**')
+        '''      
         embed.set_footer(text="bot made by. 미간#8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
         await ctx.send(embed=embed)
 
