@@ -27,7 +27,7 @@ from itertools import cycle
 from discord.ext.commands import CommandNotFound
 
 
-bot = commands.Bot(command_prefix=['k!', '쿠봇아 ', '쿠'], intents=discord.Intents.all())
+bot = commands.Bot(command_prefix=['k!', '쿠봇아 ', '쿠', '<@704999866094452816>'], intents=discord.Intents.all())
 access_token = os.environ["BOT_TOKEN"]
 status = cycle(['k!도움말로 명령어 확인', '더욱더 발전하겠습니다', '이 메세지는 10초마다 한번씩 바뀝니다', '디스코드서버를 편리하게'])
 
