@@ -11,7 +11,7 @@ status = cycle(['k!help로 명령어 확인', '더욱더 발전하겠습니다',
 @bot.event
 async def on_command_error(ctx, error):
     if isinstance(error, CommandNotFound):
-        embed = discord.Embed(title = ":x:Error!", description = "해당 명령어는 존재하지 않습니다.\nk!help으로 명령어를 찾아주세요.", color = 0x00FF21)
+        embed = discord.Embed(title = ":x:Error!", description = "해당 명령어는 존재하지 않습니다.\n--help으로 명령어를 찾아주세요.", color = 0x00FF21)
         embed.set_footer(text="bot made by. 미간#8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
         await ctx.send(embed=embed)
         return
