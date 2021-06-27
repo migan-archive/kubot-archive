@@ -35,12 +35,12 @@ class Develop(commands.Cog, name="개발"):
         embed.set_footer(text="bot made by. 미간#8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
         await message.edit(embed=embed)
 
-    @commands.command(name="풀리퀘스트", help="해당봇에 무언갈 기여하고 싶을때 git repository링크를 알려줍니다.", aliases=["피알", "pr", "PR"])
-    async def pr(self, ctx):
-        message = await ctx.reply("인터넷에서 가져오는중...")
-        embed = discord.Embed(color=0x00FF21, title='풀 리퀘스트', description='봇에 무언갈 기여 하고 싶으신가요? 아래 링크로 들어 가서 해주세요.\n[깃허브로 가기](https://github.com/siwoo131/kubot-code)')
-        embed.set_footer(text="bot made by. 미간#8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024") 
-        await message.edit(embed=embed)
+    # @commands.command(name="풀리퀘스트", help="해당봇에 무언갈 기여하고 싶을때 git repository링크를 알려줍니다.", aliases=["피알", "pr", "PR"])
+    # async def pr(self, ctx):
+    #     message = await ctx.reply("인터넷에서 가져오는중...")
+    #     embed = discord.Embed(color=0x00FF21, title='풀 리퀘스트', description='봇에 무언갈 기여 하고 싶으신가요? 아래 링크로 들어 가서 해주세요.\n[깃허브로 가기](https://github.com/siwoo131/kubot-code)')
+    #     embed.set_footer(text="bot made by. 미간#8269", icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024") 
+    #     await message.edit(embed=embed)
 
 
 def setup(bot):
