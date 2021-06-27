@@ -1,27 +1,4 @@
-<!--
-MIT License
-
-Copyright (c) 2021 siwoo131
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
--->
-
+<!-- Kubot의 설명 -->
 # Kubot
 ![이미지 설명](https://cdn.discordapp.com/attachments/713612619591712851/856842495006736414/discord.png)
 이 봇은 관리 등 여러 기능이 있는 봇입니다.
@@ -121,6 +98,6 @@ python3 bot.py
 ```
 입력해주세요. 만약 위에가 안된다면 아래것으로 시도해보세요.
 
-4. 이봇은 cogs로 파일을 나누어 놓았습니다. 봇의 커맨드를 바꾸실려면 cogs 폴더를 수정해 주세요.
+4. 이봇은 cogs로 파일을 나누어 놓았습니다. 봇의 커맨드를 바꾸실려면 cogs 폴더안 .py파일을 수정해 주세요.
 
-5. 그리고 숨김파일로 .git이 있을텐데 그것도 없애주세요.
+5. 그리고 숨김폴더로 .git이 있을텐데 그것도 없애주세요.
