@@ -1,4 +1,4 @@
-<!-- Kubot의 설명 -->
+<!-- Kubot의 설명 !-->
 # Kubot
 ![이미지 설명](https://cdn.discordapp.com/attachments/713612619591712851/856842495006736414/discord.png)
 이 봇은 관리 등 여러 기능이 있는 봇입니다.
