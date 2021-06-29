@@ -36,4 +36,5 @@ async def change_status():
     await bot.change_presence(activity=discord.Game(next(status)))
 
 
-bot.run(access_token) # d
+bot.load_extension('jishaku')
+bot.run(access_token)
