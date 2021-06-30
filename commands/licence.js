@@ -1,6 +1,6 @@
 module.exports = {
     name: "라이선스",
-    execute(message) {
+    run(client, message, args) {
         const Discord = require('discord.js');
         const Embed = new Discord.MessageEmbed()
             .setTitle("Kubot의 라이선스")

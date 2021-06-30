@@ -1,6 +1,6 @@
 module.exports = {
     name: "킥",
-    execute(message) {
+    run(client, message, args) {
         if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply("당신은 권한이 부족해요!");
         if (message.mentions.members.first()) {
             try {

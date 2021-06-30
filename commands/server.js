@@ -1,8 +1,7 @@
 module.exports = {
     name: "서버수",
-    execute(message) {
-        const Discord = require('discord.js');
-        const client = new Discord.Client();
+    run(client, message, args) {
+        const Discord = require('discord.js');s
         const Embed = new Discord.MessageEmbed()
             .setTitle("Kubot의 서버수")
             .setDescription(`현재 Kubot의 서버수는 ${client.guilds.cache.size}서버 입니다.\n현재 한디리에서 Kubot서버가 1서버로 표기되고있습니다.`)

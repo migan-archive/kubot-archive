@@ -1,6 +1,6 @@
 module.exports = {
     name: "사이트",
-    execute(message) {
+    run(client, message, args) {
         const Discord = require('discord.js');
         const Embed = new Discord.MessageEmbed()
             .setTitle("공식사이트 링크")

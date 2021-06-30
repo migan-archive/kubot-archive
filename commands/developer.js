@@ -1,6 +1,6 @@
 module.exports = {
     name: "개발자",
-    execute(message) {
+    run(client, message, args) {
         const Discord = require('discord.js');
         const Embed = new Discord.MessageEmbed()
             .setTitle("개발자는")

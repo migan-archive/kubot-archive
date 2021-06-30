@@ -1,6 +1,6 @@
 module.exports = {
     name: "야",
-    execute(message) {
+    run(client, message, args) {
         const list = ["뭐", "왜"];
         const random = Math.floor(Math.random() * 3);
         const hey = list[random];

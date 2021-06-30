@@ -1,6 +1,6 @@
 module.exports = {
     name: "정보",
-    execute(message) {
+    run(client, message, args) {
         const Discord = require('discord.js');
         const Embed = new Discord.MessageEmbed()
             .setTitle("Kubot 의 정보")

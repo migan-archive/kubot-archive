@@ -1,6 +1,6 @@
 module.exports = {
     name: "핑",
-    execute(message, args) {
+    run(client, message, args) {
         const ping = Date.now() - message.createdTimestamp;
         const Discord = require('discord.js');
         const client = new Discord.Client();

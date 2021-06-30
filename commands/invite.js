@@ -1,6 +1,6 @@
 module.exports = {
     name: "봇초대",
-    execute(message) {
+    run(client, message, args) {
         const Discord = require('discord.js');
         const Embed = new Discord.MessageEmbed()
             .setTitle("봇초대 링크")

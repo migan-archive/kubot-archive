@@ -1,6 +1,6 @@
 module.exports = {
     name: "문의",
-    execute(message) {
+    run(client, message, args) {
         const Discord = require('discord.js');
         const Embed = new Discord.MessageEmbed()
             .setColor("00FF21")
