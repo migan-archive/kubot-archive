@@ -4,3 +4,7 @@
 
 #bot run ignore
 __pycache__
+
+#node package
+node_modules
+package-lock.json
