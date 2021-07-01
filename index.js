@@ -47,4 +47,4 @@ client.on('message', async message => {
   DokdoHandler.run(message);
 })
 
-client.login(process.env.TOKEN);
+client.login('ODQ0ODk5NzI5NTgyNDU2ODQ0.YKZIMQ.DcEVHs-_45T3UtEnjoGwU7brolE'); //process.env.TOKEN
