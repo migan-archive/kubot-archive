@@ -27,7 +27,7 @@
 ## 사용된 라이브러리
 |라이브러리 이름|버전|
 |--|--|
-|discord.py|1.7.2|
+|discord.py|1.7.3|
 |datetime|4.3|
 |Dtime|0.1|
 
@@ -60,7 +60,7 @@ sudo apt install python3-pip
 1. discord.py
 ```
 1. pip install discord
-2. pip install discord.py==1.7.2
+2. pip install discord.py==1.7.3
 ```
 
 2. datetime
