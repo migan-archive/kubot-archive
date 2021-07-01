@@ -79,8 +79,6 @@ client.login("YOUR_BOT_TOKEN");
 ```
 node index.js
 ```
-입력해주세요. 만약 위에가 안된다면 아래것으로 시도해보세요.
-
 4. 이봇은 commands로 파일을 나누어 놓았습니다. 봇의 커맨드를 바꾸실려면 commands 폴더안 .js파일을 수정해 주세요.
 
 5. 그리고 숨김폴더로 .git이 있을텐데 그것도 없애주세요.
