@@ -67,7 +67,7 @@ class Help(commands.Cog, name="도움"):
                          icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
         await ctx.send(embed=embed)
 
-    @commands.command(name="공지", help="공지를 알려줍니다.")
+    @commands.command(name="공지보기", help="공지를 알려줍니다.")
     async def process(self, ctx):
         embed = discord.Embed(color=0x00FF21, title="공지")
         embed.add_field(
