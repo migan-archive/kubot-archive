@@ -71,7 +71,7 @@ class Help(commands.Cog, name="도움"):
     async def process(self, ctx):
         embed = discord.Embed(color=0x00FF21, title="공지")
         embed.add_field(
-            name='1번', value='현재 Kubot은 파이썬에서 node.js로의 이전을 준비중입니다."')
+            name='1번', value='현재 Kubot은 파이썬에서 node.js로의 이전을 준비중입니다.')
         embed.set_footer(text="bot made by. 미간#8269",
                          icon_url="https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024")
         await ctx.send(embed=embed)
