@@ -54,12 +54,11 @@ nvm install 16.4.0
 를 쳐주세요. (최신버전)
 
 ## 라이브러리 설치법
+* 아래 명령어를 쳐주세요!
 * 봇실행 파일이 있는곳에서 설치해 주세요!
-1. discord.js
 ```javascript
-npm i discord.js@12.5.3
+npm install
 ```
-아마 위 명령어만 쳐도 나머지 2개가 설치될껍니다.(package.json이 있는경우)
 
 ## 사용법
 1. index.js를 여셔서 line 50 부분에 아래에 있는 것은 없애주시고 토큰을 넣어주세요.

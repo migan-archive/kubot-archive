@@ -25,7 +25,9 @@ client.on('ready', () => {
   console.log("Licence = MIT");
   console.log("봇 원작자 = 미간#8269");
   console.log("--------------------------------------");
-  client.user.setActivity('--도움말로 명령어 확인', { type: 'PLAYING' });
+  client.user.setActivity('--도움말로 명령어 확인', {
+    type: 'PLAYING'
+  });
 });
 
 client.on('message', msg => {
