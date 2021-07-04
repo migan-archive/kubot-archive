@@ -13,6 +13,7 @@ client.commands.load = dir => {
     const cmd = require(`./commands/${file}`);
     client.commands.set(cmd.name, cmd);
   }
+
   console.log("------------------------------------------------------------------------------------------------------------------------");
   console.log(client.commands.map(c => c.name).join(', ') + ' 명령어가 로드됨.');
   console.log("------------------------------------------------------------------------------------------------------------------------");
@@ -21,14 +22,28 @@ client.commands.load = dir => {
 client.commands.load(__dirname + "/commands");
 
 client.on('ready', () => {
+  const Status = [
+    '--help로 명령어 확인',
+    '더욱더 발전하겠습니다',
+    '이 메세지는 10초마다 한번씩 바뀝니다',
+    '디스코드서버를 편리하게'
+  ];
+
+  let index = 0;
+  setInterval(() => {
+    if (index === Status.length) index = 0;
+    const status1 = Status[index];
+    client.user.setActivity(status1, {
+      type: 'PLAYING'
+    }).catch(console.error)
+    index++;
+  }, 10000);
+
   console.log("--------------------------------------");
   console.log(`${client.user.tag}으로 로그인 하셨습니다.`);
   console.log("Licence = MIT");
   console.log("봇 원작자 = 미간#8269");
   console.log("--------------------------------------");
-  client.user.setActivity('-도움말로 명령어 확인', {
-    type: 'PLAYING'
-  });
 });
 
 client.on('message', msg => {
