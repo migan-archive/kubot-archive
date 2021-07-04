@@ -76,7 +76,7 @@ client.login("YOUR_BOT_TOKEN");
 
 3. 그리고 다하셨다면 콘솔창에다가 아래의 문구를 써주세요.
 ```
-node index.js
+npm run r
 ```
 4. 이봇은 commands로 파일을 나누어 놓았습니다. 봇의 커맨드를 바꾸실려면 commands 폴더안 .js파일을 수정해 주세요.
 
