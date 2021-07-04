@@ -1,5 +1,6 @@
 <!-- Kubot의 설명 -->
 # Kubot
++ 주의! 이 버전은 아직 개발중이며, 때문에 불안정 할 수 있습니다.
 
 이 봇은 관리 등 여러 기능이 있는 봇입니다.
 
@@ -16,6 +17,7 @@
 [웹사이트 바로가기](https://kubot.netlify.app/)
 
 # 개발 관련
++ 주의! 이 버전은 아직 개발중이며, 때문에 불안정 할 수 있습니다.
 + 개발 할때 쓴 node.js버전, 라이브러리 버전을 적어두었습니다.
 
 ## 사용된 node.js 버전
@@ -49,7 +51,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 ```
 그리고
 ```javascript
-nvm install 16.4.0
+nvm install 16.4.1
 ```
 를 쳐주세요. (최신버전)
 
@@ -78,7 +80,7 @@ client.login("YOUR_BOT_TOKEN");
 ```
 npm run r
 ```
-4. 이봇은 commands로 파일을 나누어 놓았습니다. 봇의 커맨드를 바꾸실려면 commands 폴더안 .js파일을 수정해 주세요.
+4. 이봇은 commands로 파일을 나누어 놓았습니다. 봇의 커맨드를 바꾸실려면 src/commands 폴더안 .js파일을 수정해 주세요.
 
 5. 그리고 숨김폴더로 .git이 있을텐데 그것도 없애주세요.
 

@@ -1,7 +1,7 @@
 {
-    "name": "discordbot",
+    "name": "kubot",
     "version": "1.0.0",
-    "description": "",
+    "description": "discord Kubot",
     "main": "index.js",
     "scripts": {
         "r": "node src"
