@@ -4,6 +4,7 @@ const Dokdo = require('dokdo');
 const fs = require('fs');
 const DokdoHandler = new Dokdo(client, { aliases: ['dokdo', 'dok'], prefix: '!', owners: '415135882006495242' }); // 여기있는 prefix는 dokdo 커맨드 전용 접두사입니다./ owners 안애다가 오너의 ID를 넣어주세요!
 const prefix = "--"; // 여기에 봇 접두사를 넣으면 됩니다.
+const config = require('../config.json'); // 이건 TEST할때 쓰는 겁니다. 여기안에 토큰이 들어있어서 gitignore에 적어두었습니다
 
 client.commands = new Discord.Collection()
 
@@ -25,7 +26,7 @@ client.on('ready', () => {
   console.log("Licence = MIT");
   console.log("봇 원작자 = 미간#8269");
   console.log("--------------------------------------");
-  client.user.setActivity('--도움말로 명령어 확인', {
+  client.user.setActivity('-도움말로 명령어 확인', {
     type: 'PLAYING'
   });
 });
@@ -49,4 +50,4 @@ client.on('message', async message => {
   DokdoHandler.run(message);
 })
 
-client.login(process.env.TOKEN); //process.env.TOKEN
+client.login(config.token); //process.env.TOKEN (heroku), config.token (test)

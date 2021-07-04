@@ -18,19 +18,19 @@ module.exports = {
                 },
                 {
                     name: "정보 명령어",
-                    value: "**`안녕`**, **`놀자`**, **`바보`**, **`ㅋㅋ`**,  **`랜덤숫자`**"
+                    value: "**`안녕`**, **`놀자`**, **`바보`**,  **`랜덤숫자`**"
                 },
                 {
-                    name: "임시삭제 명령어",
-                    value: "관리 명령어: 킥, 밴 (안정성 검증불가)"
-                },
+                    name: "관리 명령어",
+                    value: "**`킥`**, **`밴`**"
+                }
                 // {
-                //     name: "관리 명령어",
-                //     value: "**`킥`**, **`밴`**"
-                // } 이 명령어는 임시삭제
+                //     name: "임시삭제 명령어",
+                //     value: "없음"
+                // },
             )
             .setTimestamp(Date.now())
-            .setFooter("Bot Made by. 미간#8269", "https://cdn.discordapp.com/avatars/415135882006495242/cb4c1c1fce24f512e07f673989814572.webp?size=1024");
+            .setFooter(message.author.tag, message.author.displayAvatarURL());
         message.channel.send(Embed);
     }
 }

@@ -1,10 +1,13 @@
-#ide ignore
+# ide ignore
 .vscode
 .idea
 
-#bot run ignore
+# bot run ignore
 __pycache__
 
-#node package
+# node package
 node_modules
 package-lock.json
+
+# config
+config.json
