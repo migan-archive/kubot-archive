@@ -21,7 +21,7 @@ client.commands.load(__dirname + "/commands");
 
 client.on('ready', () => {
   const Status = [
-    '--help로 명령어 확인',
+    '--도움말로 명령어 확인',
     '더욱더 발전하겠습니다',
     '이 메세지는 10초마다 한번씩 바뀝니다',
     '디스코드서버를 편리하게'
