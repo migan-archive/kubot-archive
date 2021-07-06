@@ -46,6 +46,10 @@ module.exports = {
                     value: "미간#8269 입니다."
                 },
                 {
+                    name: "현재 공지",
+                    value: "없음"
+                },
+                {
                     name: "도움 명령어",
                     value: "**`문의`**"
                 },
