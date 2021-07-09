@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require('fs');
 const prefix = "--"; // 여기에 봇 접두사를 넣으면 됩니다.
-const config = require('../config.json'); // 이건 TEST할때 쓰는 겁니다. 여기안에 토큰이 들어있어서 gitignore에 적어두었습니다
 
 client.commands = new Discord.Collection()
 
@@ -59,4 +58,4 @@ client.on('message', msg => {
 });
 
 
-client.login(config.token); //process.env.TOKEN (heroku), config.token (test)
+client.login(process.env.TOKEN);

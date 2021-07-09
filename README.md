@@ -1,7 +1,5 @@
 <!-- Kubot의 설명 -->
 # Kubot
-+ 주의! 이 버전은 아직 개발중이며, 때문에 불안정 할 수 있습니다.
-
 이 봇은 관리 등 여러 기능이 있는 봇입니다.
 
 ## 소개
@@ -17,7 +15,6 @@
 [웹사이트 바로가기](https://kubot.netlify.app/)
 
 # 개발 관련
-+ 주의! 이 버전은 아직 개발중이며, 때문에 불안정 할 수 있습니다.
 + 개발 할때 쓴 node.js버전, 라이브러리 버전을 적어두었습니다.
 
 ## 사용된 node.js 버전
@@ -50,7 +47,7 @@
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 ```
 그리고
-```javascript
+```bash
 nvm install 16.4.1
 ```
 를 쳐주세요. (최신버전)
@@ -59,12 +56,12 @@ nvm install 16.4.1
 
 * 아래 명령어를 쳐주세요!
 * 봇실행 파일이 있는곳에서 설치해 주세요!
-```javascript
+```bash
 npm install
 ```
 
 ## 사용법
-1. index.js를 여셔서 line 50 부분에 아래에 있는 것은 없애주시고 토큰을 넣어주세요.
+1. index.js를 여셔서 bot실행 구문에 아래처럼 바꾸주세요!
 ```javascript
 client.login(process.env.TOKEN);
 ```

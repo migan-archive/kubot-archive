@@ -14,10 +14,6 @@ module.exports = {
                     value: "[공식 디스코드 바로가기](https://discord.gg/S8pN4eD)\n[공식 사이트 바로가기](https://kubot.netlify.app/)"
                 },
                 {
-                    name: "주의사항",
-                    value: "현재 개발중이며, 또한 불안정 할 수 있습니다."
-                },
-                {
                     name: "봇초대",
                     value: "[초대하러 가기](https://discord.com/oauth2/authorize?client_id=704999866094452816&permissions=8&scope=bot)"
                 },
