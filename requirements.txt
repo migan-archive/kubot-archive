@@ -1,4 +1,0 @@
-discord.py==1.7.2
-datetime==4.3
-Dtime==0.1
-jishaku==2.0.0

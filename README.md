@@ -1,6 +1,7 @@
 <!-- Kubot의 설명 -->
 # Kubot
-![이미지 설명](https://cdn.discordapp.com/attachments/713612619591712851/856842495006736414/discord.png)
++ 주의! 이 버전은 아직 개발중이며, 때문에 불안정 할 수 있습니다.
+
 이 봇은 관리 등 여러 기능이 있는 봇입니다.
 
 ## 소개
@@ -16,20 +17,21 @@
 [웹사이트 바로가기](https://kubot.netlify.app/)
 
 # 개발 관련
-+ 개발 할때 쓴 파이썬버전, 라이브러리 버전을 적어두었습니다.
++ 주의! 이 버전은 아직 개발중이며, 때문에 불안정 할 수 있습니다.
++ 개발 할때 쓴 node.js버전, 라이브러리 버전을 적어두었습니다.
 
-## 사용된 파이썬 버전
+## 사용된 node.js 버전
 |운영체제, 서버|버전|
 |--|--|
-|ubuntu 20.04.2 LTS (WSL)|3.8.5|
-|heroku|3.8.5|
+|ubuntu 20.04.2 LTS (WSL)|16.4.1|
+|heroku|(아직 추가안함)|
 
 ## 사용된 라이브러리
 |라이브러리 이름|버전|
 |--|--|
-|discord.py|1.7.3|
-|datetime|4.3|
-|Dtime|0.1|
+|discord.js|12.5.3|
+|dokdo|0.3.0|
+|koreanbots|2.0.12|
 
 
 # 사용하실때
@@ -39,65 +41,48 @@
 - 해당봇은 MIT 라이선스를 사용중입니다.
 - 아무렇게나 써도됩니다.
 
-## 파이썬 설치법
-1. 윈도우라면 python 공식 홈페이지에 가서 다운받으십시오(path는 꼭! 체크)
-2. 만약 리눅스라면 기본적으로 깔려있을껍니다. 만약 아니라면 터미널에 아래에 있는 명령어를 치십시오.
-```
-sudo apt update
+## node.js 설치법
+* 주의! 만약 node.js 버젼이 12이하라면 Embed가 작동을 안합니다.
+1. 윈도우라면 node.js 공식 홈페이지에 가서 다운받으십시오
+2. 리눅스라면 터미널에 아래에 있는 명령어를 치십시오.
+* 이 설치법은 nvm을 설치하여 node.js를 설치합니다. 그리고 ubuntu 기준입니다. (방법2)
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 ```
 그리고
+```javascript
+nvm install 16.4.1
 ```
-sudo apt install python3
-```
-를 쳐주세요.
-
-그리고 pip도 깔아야 합니다.
-```
-sudo apt install python3-pip
-```
+를 쳐주세요. (최신버전)
 
 ## 라이브러리 설치법
-1. discord.py
-```
-1. pip install discord
-2. pip install discord.py==1.7.3
-```
 
-2. datetime
-
-```
-pip install datetime==4.3
-```
-
-3. Dtime
-```
-pip install Dtime==0.1
+* 아래 명령어를 쳐주세요!
+* 봇실행 파일이 있는곳에서 설치해 주세요!
+```javascript
+npm install
 ```
 
 ## 사용법
-1. bot.py를 여셔서 access_token 부분에 아래에 있는 것은 없애주시고 토큰을 넣어주세요.
-```python
-access_token = os.environ["BOT_TOKEN"]
+1. index.js를 여셔서 line 50 부분에 아래에 있는 것은 없애주시고 토큰을 넣어주세요.
+```javascript
+client.login(process.env.TOKEN);
 ```
 이렇게
-```python
-access_token = "Your_bot_token"
+```javascript
+client.login("YOUR_BOT_TOKEN");
 ```
 
-2. Procfile, requirement.txt, runtime.txt, Aptfile은 없애주시고 (원한다면 .gitignore도 없애도됨) 사용해 주세요.
+2. Procfile, Aptfile은 없애주시고 (원한다면 .gitignore도 없애도됨) 사용해 주세요.
 
 + 코드를 변형해서 사용 하셔도 됩니다.
 
 3. 그리고 다하셨다면 콘솔창에다가 아래의 문구를 써주세요.
 ```
-python bot.py
+npm run r
 ```
-나
-```
-python3 bot.py
-```
-입력해주세요. 만약 위에가 안된다면 아래것으로 시도해보세요.
-
-4. 이봇은 cogs로 파일을 나누어 놓았습니다. 봇의 커맨드를 바꾸실려면 cogs 폴더안 .py파일을 수정해 주세요.
+4. 이봇은 commands로 파일을 나누어 놓았습니다. 봇의 커맨드를 바꾸실려면 src/commands 폴더안 .js파일을 수정해 주세요.
 
 5. 그리고 숨김폴더로 .git이 있을텐데 그것도 없애주세요.
+
+6. Dokdo 커맨드를 이용하실려면 owners 에 있는 아이디를 바꿔주세요!

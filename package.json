@@ -1,0 +1,14 @@
+{
+    "name": "kubot",
+    "version": "1.0.0",
+    "description": "discord Kubot",
+    "main": "index.js",
+    "scripts": {
+        "r": "node src"
+    },
+    "dependencies": {
+        "discord.js": "^12.5.3",
+        "dokdo": "^0.3.0",
+        "koreanbots": "^2.0.12"
+    }
+}
