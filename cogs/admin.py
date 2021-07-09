@@ -8,8 +8,6 @@ class Admin(commands.Cog, name="관리"):
 
     @commands.command(name="청소", help="채팅청소를 해줍니다.(만약 채팅 갯수 설정 안하면 5개)")
     async def clear(self, ctx, amount=5):
-        global user
-        global permission
         permission = (ctx.author.guild_permissions.administrator)
         user = ctx.author
 
@@ -30,6 +28,8 @@ class Admin(commands.Cog, name="관리"):
 
     @commands.command(name="킥", help="사용자를 추방합니다.")
     async def kick(self, ctx, member: discord.Member, *, reason=None):
+        permission = (ctx.author.guild_permissions.administrator)
+        user = ctx.author
 
         if permission is True:
             embed = discord.Embed(color=0x00FF21, title="멤버 추방",
@@ -48,6 +48,8 @@ class Admin(commands.Cog, name="관리"):
 
     @commands.command(name="밴", help="사용자를 차단합니다.")
     async def ban(self, ctx, member: discord.Member, *, reason=None):
+        permission = (ctx.author.guild_permissions.administrator)
+        user = ctx.author
 
         if permission is True:
             embed = discord.Embed(color=0x00FF21, title="멤버 차단",
