@@ -2,18 +2,10 @@
 .vscode
 .idea
 
-# bot run ignore
-__pycache__
-
-<<<<<<< HEAD
-# node
-package-lock.json
-node_modules
-=======
 # node package
 node_modules
 package-lock.json
->>>>>>> beta/node
+
 
 # config
 config.json
