@@ -1,4 +1,3 @@
-<!-- Kubot의 설명 -->
 # Kubot
 이 봇은 관리 등 여러 기능이 있는 봇입니다.
 
@@ -43,20 +42,26 @@
 1. 윈도우라면 node.js 공식 홈페이지에 가서 다운받으십시오
 2. 리눅스라면 터미널에 아래에 있는 명령어를 치십시오.
 * 이 설치법은 nvm을 설치하여 node.js를 설치합니다. 그리고 ubuntu 기준입니다. (방법2)
-```bash
+```zsh
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 ```
 그리고
-```bash
+```zsh
 nvm install 16.4.1
 ```
 를 쳐주세요. (최신버전)
 
 ## 라이브러리 설치법
 
+## 폴더 받기
+아래의 명령어를 쳐주세요.
+```zsh
+git clone https://github.com/siwoo131/kubot-code.git
+```
+
 * 아래 명령어를 쳐주세요!
 * 봇실행 파일이 있는곳에서 설치해 주세요!
-```bash
+```zsh
 npm install
 ```
 
@@ -75,7 +80,7 @@ client.login("YOUR_BOT_TOKEN");
 + 코드를 변형해서 사용 하셔도 됩니다.
 
 3. 그리고 다하셨다면 콘솔창에다가 아래의 문구를 써주세요.
-```
+```zsh
 npm run r
 ```
 4. 이봇은 commands로 파일을 나누어 놓았습니다. 봇의 커맨드를 바꾸실려면 src/commands 폴더안 .js파일을 수정해 주세요.

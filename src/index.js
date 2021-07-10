@@ -10,10 +10,7 @@ client.commands.load = dir => {
     const cmd = require(`./commands/${file}`);
     client.commands.set(cmd.name, cmd);
   }
-
-  console.log("------------------------------------------------------------------------------------------------------------------------");
-  console.log(client.commands.map(c => c.name).join(', ') + ' 명령어가 로드됨.');
-  console.log("------------------------------------------------------------------------------------------------------------------------");
+  console.log(client.commands.map(c => c.name).join(', ') + ' 로드완료');
 }
 
 client.commands.load(__dirname + "/commands");
@@ -35,12 +32,10 @@ client.on('ready', () => {
     }).catch(console.error)
     index++;
   }, 10000);
-
-  console.log("--------------------------------------");
-  console.log(`${client.user.tag}으로 로그인 하셨습니다.`);
-  console.log("Licence = MIT");
-  console.log("봇 원작자 = 미간#8269");
-  console.log("--------------------------------------");
+  console.log(`로그인한 사용자: ${client.user.tag}`);
+  console.log("Licence: MIT");
+  console.log("봇 원작자: ! 미간 !#8269");
+  console.log("======================================");
 });
 
 
