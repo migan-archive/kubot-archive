@@ -11,16 +11,20 @@ module.exports = {
             .setColor("00FF21")
             .addFields(
                 {
-                    name: "가입일",
-                    value: new Date(user.createdTimestamp).toLocaleDateString()
-                },
-                {
                     name: "이름",
                     value: user.username
                 },
                 {
+                    name: "가입일",
+                    value: new Date(user.createdTimestamp).toLocaleDateString()
+                },
+                {
                     name: "ID",
                     value: user.id
+                },
+                {
+                    name: "상태",
+                    value: user.presence.status
                 },
                 {
                     name: "봇여부",

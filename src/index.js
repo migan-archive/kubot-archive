@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require('fs');
 const prefix = "--"; // 여기에 봇 접두사를 넣으면 됩니다.
+const config = require('../config.json');
 
 client.commands = new Discord.Collection()
 
@@ -58,4 +59,4 @@ client.on('message', msg => {
 });
 
 
-client.login(process.env.TOKEN);
+client.login(config.token);
