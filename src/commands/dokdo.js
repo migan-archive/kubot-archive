@@ -12,7 +12,7 @@ module.exports = {
                 .setTimestamp(Date.now())
                 .setFooter(message.author.username, message.author.displayAvatarURL())
         );
-        const DokdoHandler = new Dokdo(client, { aliases: ['dokdo', 'dok'], prefix: '--' });
+        const DokdoHandler = new Dokdo(client, { aliases: ['dokdo', 'dok'], prefix: '--', owners: "415135882006495242" }); // 여기있는 prefix는 dokdo 커맨드 전용 접두사입니다./ owners 안애다가 오너의 ID를 넣어주세요!
         DokdoHandler.run(message);
     }
 }
