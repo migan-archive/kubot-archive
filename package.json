@@ -8,8 +8,7 @@
     },
     "dependencies": {
         "discord.js": "^12.5.3",
-        "dokdo": "0.3.0",
-        "koreanbots": "^2.0.12"
+        "dokdo": "0.3.0"
     },
     "engines": {
         "node": "16.4.1"
