@@ -19,7 +19,7 @@ module.exports = {
                 },
                 {
                     name: "서버수",
-                    value: `현재 ${client.user.username}의 서버수는 ${client.guilds.cache.size}서버 입니다.\n현재 한디리에서 ${client.user.username}의서버가 1서버로 표기되고있습니다.`
+                    value: `현재 ${client.user.username}의 서버수는 ${client.guilds.cache.size}서버 입니다.`
                 },
                 {
                     name: "이용자수",
