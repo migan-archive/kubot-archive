@@ -35,7 +35,7 @@ module.exports = {
                 },
                 {
                     name: "핑",
-                    value: `\`${client.ws.ping}\`ms`
+                    value: `웹소켓 핑: \`${client.ws.ping}\`ms\n메세지 핑: \`${Date.now() - message.createdTimestamp}\`ms`
                 },
                 {
                     name: "개발자",
