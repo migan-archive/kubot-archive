@@ -10,7 +10,7 @@ client.commands.load = dir => {
     const cmd = require(`./commands/${file}`);
     client.commands.set(cmd.name, cmd);
   }
-  console.log(client.commands.map(c => c.name).join(', ') + ' 로드완료');
+  console.log(client.commands.map(c => c.name).join(', ') + ' Load Success');
 }
 
 client.commands.load(__dirname + "/commands");
@@ -32,32 +32,32 @@ client.on('ready', () => {
     }).catch(console.error)
     index++;
   }, 10000);
-  console.log(`로그인한 사용자: ${client.user.tag}`);
+  console.log(`Login: ${client.user.tag}`);
   console.log("Licence: MIT");
-  console.log("봇 원작자: ! 미간 !#8269");
+  console.log("Bot Developer: ! 미간 !#8269");
   console.log("======================================");
 });
 
 
 client.on('message', msg => {
   if (msg.author.bot) return;
-  if (msg.content == "쿠봇아 안녕") {
+  if (msg.content === "쿠봇아 안녕") {
     const list = ["안녕", "hi", "안녕하세요", "hello", "좋은아침이에요!"];
     const random = Math.floor(Math.random() * 5);
     const hello = list[random];
     msg.reply(hello);
   };
 
-  if (msg.content == "쿠봇아 놀자") {
+  if (msg.content === "쿠봇아 놀자") {
     const list = ["바빠", "뭐하고 놀건데?"];
     const random = Math.floor(Math.random() * 2);
     const enjoy = list[random];
     msg.reply(enjoy);
   };
 
-  if (msg.content == "쿠봇아 뭐해") return msg.reply("저는 사람들이랑 대화중이에요!");
-  if (msg.content == "쿠봇아 바보") return msg.reply("바보 아니거든?(씨익...)");
-  if (msg.content == "쿠봇아 야") {
+  if (msg.content === "쿠봇아 뭐해") return msg.reply("저는 사람들이랑 대화중이에요!");
+  if (msg.content === "쿠봇아 바보") return msg.reply("바보 아니거든?(씨익...)");
+  if (msg.content ==="쿠봇아 야") {
     const list = ["뭐", "왜"];
     const random = Math.floor(Math.random() * 2);
     const hey = list[random];
