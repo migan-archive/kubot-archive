@@ -51,7 +51,7 @@ module.exports = {
                 },
                 {
                     name: "일반 명령어",
-                    value: "**`랜덤숫자`**, **`안녕`**"
+                    value: "**`랜덤숫자`**"
                 },
                 {
                     name: "정보 명령어",
@@ -60,6 +60,10 @@ module.exports = {
                 {
                     name: "관리 명령어",
                     value: "**`킥`**, **`밴`**, **`청소`**"
+                },
+                {
+                    name: `${client.user.username}이랑 대화 하고 싶다면 \`쿠봇아 \`를 붙혀 주세요!`,
+                    value: `ex) 쿠봇아 안녕`
                 }
                 // {
                 //     name: "임시삭제 명령어",

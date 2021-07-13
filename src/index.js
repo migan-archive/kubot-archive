@@ -41,6 +41,28 @@ client.on('ready', () => {
 
 client.on('message', msg => {
   if (msg.author.bot) return;
+  if (msg.content == "쿠봇아 안녕") {
+    const list = ["안녕", "hi", "안녕하세요", "hello", "좋은아침이에요!"];
+    const random = Math.floor(Math.random() * 5);
+    const hello = list[random];
+    msg.reply(hello);
+  };
+
+  if (msg.content == "쿠봇아 놀자") {
+    const list = ["바빠", "뭐하고 놀건데?"];
+    const random = Math.floor(Math.random() * 2);
+    const enjoy = list[random];
+    msg.reply(enjoy);
+  };
+
+  if (msg.content == "쿠봇아 뭐해") return msg.reply("저는 사람들이랑 대화중이에요!");
+  if (msg.content == "쿠봇아 바보") return msg.reply("바보 아니거든?(씨익...)");
+  if (msg.content == "쿠봇아 야") {
+    const list = ["뭐", "왜"];
+    const random = Math.floor(Math.random() * 2);
+    const hey = list[random];
+    msg.reply(hey);
+  };
   if (!msg.content.startsWith(prefix)) return;
   if (msg.content.slice(0, prefix.length) !== prefix) return;
 
