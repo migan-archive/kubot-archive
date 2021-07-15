@@ -60,7 +60,7 @@ client.on('message', msg => {
   };
 
   if (msg.content === "쿠봇아 뭐해") return msg.reply("저는 사람들이랑 대화중이에요!");
-  if (msg.content === "쿠봇아 바보") return msg.reply("바보 아니거든?(씨익...)");
+  if (msg.content === "쿠봇아 바보") return msg.reply("바보 아닌데요");
   if (msg.content ==="쿠봇아 야") {
     const list = ["뭐", "왜"];
     const random = Math.floor(Math.random() * 2);
@@ -69,6 +69,8 @@ client.on('message', msg => {
   };
 
   if (msg.content === "쿠봇아 바이") return msg.reply("안녕히 계세요!");
+  if (msg.content === "쿠봇아 인성문제있어?") return msg.reply("아닙니다");
+  if (msg.content === "쿠봇아 아라아라해줘") return msg.reply("미쳤습니까 휴먼?");
 
   if (!msg.content.startsWith(prefix)) return;
   if (msg.content.slice(0, prefix.length) !== prefix) return;
