@@ -7,7 +7,7 @@
         "r": "node src"
     },
     "dependencies": {
-        "discord.js": "^12.5.3",
+        "discord.js": "12.5.3",
         "dokdo": "0.4.0"
     },
     "engines": {
