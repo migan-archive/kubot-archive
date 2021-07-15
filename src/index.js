@@ -2,6 +2,9 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require('fs');
 const prefix = "--"; // 여기에 봇 접두사를 넣으면 됩니다.
+const Dokdo = require('dokdo');
+
+const DokdoHandler = new Dokdo(client, { aliases: ['dokdo', 'dok', "독도", "debug", "debuging"], prefix: '--', owners: "415135882006495242", disableAttachmentExecution: true, noPerm: (message) => message.reply("어라? 당신은 개발자가 아닌데요?") }); // 여기있는 prefix는 dokdo 커맨드 전용 접두사입니다./ owners 안애다가 오너의 ID를 넣어주세요!
 
 client.commands = new Discord.Collection()
 
@@ -41,6 +44,7 @@ client.on('ready', () => {
 
 client.on('message', msg => {
   if (msg.author.bot) return;
+  DokdoHandler.run(msg);
   if (msg.content === "쿠봇아 안녕" || msg.content === "쿠봇아 안뇽" || msg.content === "쿠봇아 하이") {
     const list = ["안녕", "hi", "안녕하세요", "hello", "좋은아침이에요!"];
     const random = Math.floor(Math.random() * 5);
