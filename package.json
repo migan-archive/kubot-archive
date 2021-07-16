@@ -4,7 +4,8 @@
     "description": "discord Kubot",
     "main": "index.js",
     "scripts": {
-        "r": "node src"
+        "start": "node src/index.js",
+        "test": "node src/test.js"
     },
     "dependencies": {
         "discord.js": "^12.5.3",
