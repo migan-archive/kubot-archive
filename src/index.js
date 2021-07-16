@@ -45,6 +45,14 @@ client.on('ready', () => {
 client.on('message', msg => {
   if (msg.author.bot) return;
   DokdoHandler.run(msg);
+  if (msg.content === `<@!${client.user.id}>`) return msg.reply(
+      new Discord.MessageEmbed()
+          .setColor("00FF21")
+          .setTitle(`${client.user.username}이에요!`)
+          .setDescription("저의 접두사는 `--`이에요!\n`--도움말`로 명령어를 확인해 주세요!")
+          .setTimestamp(Date.now())
+          .setFooter(msg.author.tag, msg.author.displayAvatarURL())
+  );
   if (msg.content === "쿠봇아 안녕" || msg.content === "쿠봇아 안뇽" || msg.content === "쿠봇아 하이") {
     const list = ["안녕", "hi", "안녕하세요", "hello", "좋은아침이에요!"];
     const random = Math.floor(Math.random() * 5);
