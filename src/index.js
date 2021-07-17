@@ -49,7 +49,7 @@ client.on('message', msg => {
       new Discord.MessageEmbed()
           .setColor("00FF21")
           .setTitle(`${client.user.username}이에요!`)
-          .setDescription("저의 접두사는 `--`이에요!\n`--도움말`로 명령어를 확인해 주세요!")
+          .setDescription(`저의 접두사는 \`${prefix}\`이에요!\n\`${prefix}도움말\`로 명령어를 확인해 주세요!`)
           .setTimestamp(Date.now())
           .setFooter(msg.author.tag, msg.author.displayAvatarURL())
   );
