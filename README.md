@@ -60,8 +60,13 @@ git clone https://github.com/siwoo131/kubot-code.git
 ## 라이브러리 설치법
 * 아래 명령어를 쳐주세요!
 * 봇실행 파일이 있는곳에서 설치해 주세요!
+* npm
 ```zsh
 npm install
+```
+* yarn
+```zsh
+yarn
 ```
 
 ## 사용법
