@@ -3,11 +3,6 @@
     "version": "1.0.0",
     "description": "discord Kubot",
     "main": "src/index.js",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/siwoo131/kubot-code.git"
-    },
     "scripts": {
         "start": "node src/index.js",
         "test": "node src/test.js"
@@ -17,6 +12,6 @@
         "dokdo": "^0.3.0"
     },
     "engines": {
-        "node": "16.4.2"
+        "node": "16.4.1"
     }
 }
