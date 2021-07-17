@@ -74,7 +74,7 @@ client.login(process.env.TOKEN);
 client.login("YOUR_BOT_TOKEN");
 ```
 
-2. Procfile, Aptfile은 없애주시고 (원한다면 .gitignore도 없애도됨) 사용해 주세요.
+2. Procfile, Aptfile은 없애주시고 (원한다면 .gitignore 도 없애도됨) 사용해 주세요.
 
 + 코드를 변형해서 사용 하셔도 됩니다.
 
@@ -82,8 +82,6 @@ client.login("YOUR_BOT_TOKEN");
 ```zsh
 npm run r
 ```
-4. 이봇은 commands로 파일을 나누어 놓았습니다. 봇의 커맨드를 바꾸실려면 src/commands 폴더안 .js파일을 수정해 주세요.
+4. 이봇은 commandHandler 로 파일을 나누어 놓았습니다. 봇의 커맨드를 바꾸실려면 src/commands 폴더안 .js 파일을 수정해 주세요.
 
 5. 그리고 숨김폴더로 .git이 있을텐데 그것도 없애주세요.
-
-6. Dokdo 커맨드를 이용하실려면 owners 에 있는 아이디를 바꿔주세요!

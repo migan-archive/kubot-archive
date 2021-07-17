@@ -4,7 +4,7 @@ const fs = require('fs');
 const prefix = "--"; // 여기에 봇 접두사를 넣으면 됩니다.
 const Dokdo = require('dokdo');
 
-const DokdoHandler = new Dokdo(client, { aliases: ['dokdo', 'dok', "독도", "debug", "debuging"], prefix: '--', owners: "415135882006495242", disableAttachmentExecution: true, noPerm: (message) => message.reply("어라? 당신은 개발자가 아닌데요?") }); // 여기있는 prefix는 dokdo 커맨드 전용 접두사입니다./ owners 안애다가 오너의 ID를 넣어주세요!
+const DokdoHandler = new Dokdo(client, { aliases: ['dokdo', 'dok', "독도", "debug", "debugging", "Dok", "Dokdo"], prefix: '--', noPerm: (message) => message.reply("어라? 당신은 개발자가 아닌데요?") }); // 여기있는 prefix 는 Dokdo 커맨드 전용 접두사입니다.
 
 client.commands = new Discord.Collection()
 
