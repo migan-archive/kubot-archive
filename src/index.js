@@ -3,11 +3,17 @@ const client = new Discord.Client();
 const fs = require('fs');
 const prefix = "--"; // 여기에 봇 접두사를 넣으면 됩니다.
 const Dokdo = require('dokdo');
-
-const DokdoHandler = new Dokdo(client, { aliases: ['dokdo', 'dok', "독도", "debug", "debugging", "Dok", "Dokdo"], prefix: '--', noPerm: (message) => message.reply("어라? 당신은 개발자가 아닌데요?") }); // 여기있는 prefix 는 Dokdo 커맨드 전용 접두사입니다.
+const DokdoHandler = new Dokdo(
+    client,
+    {
+      aliases: ['dokdo', 'dok', "독도", "debug", "debugging", "Dok", "Dokdo"],
+      prefix: '--',
+      noPerm: (message) => message.reply("어라? 당신은 개발자가 아닌데요?")
+  }
+); // 여기있는 prefix 는 Dokdo 커맨드 전용 접두사입니다.
 
 client.commands = new Discord.Collection()
-
+process.env.SHELL = '/bin/bash';
 client.commands.load = dir => {
   for (const file of fs.readdirSync(dir)) {
     const cmd = require(`./commands/${file}`);
@@ -37,7 +43,7 @@ client.on('ready', () => {
   }, 10000);
   console.log(`Login: ${client.user.tag}`);
   console.log("Licence: MIT");
-  console.log("Bot Developer: ! 미간 !#8269");
+  console.log("Author: ! 미간 !#8269");
   console.log("======================================");
 });
 
