@@ -2,6 +2,13 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require('fs');
 const prefix = "--"; // 여기에 봇 접두사를 넣으면 됩니다.
+const { KoreanbotsClient } = require("koreanbots")
+const clientKRBots = new KoreanbotsClient({
+  koreanbotsToken: process.env.KORBOTS_TOKEN,
+  koreanbotsOptions: {
+    interval: 600000 //10분마다 서버 수를 업데이트합니다. (기본값 30분)
+  }
+})
 const Dokdo = require('dokdo');
 const DokdoHandler = new Dokdo(
     client,
@@ -13,7 +20,9 @@ const DokdoHandler = new Dokdo(
 ); // 여기있는 prefix 는 Dokdo 커맨드 전용 접두사입니다.
 
 client.commands = new Discord.Collection()
+
 process.env.SHELL = '/bin/bash';
+
 client.commands.load = dir => {
   for (const file of fs.readdirSync(dir)) {
     const cmd = require(`./commands/${file}`);
@@ -99,3 +108,8 @@ client.on('message', msg => {
 
 
 client.login(process.env.TOKEN);
+
+process.on("SIGINT", () => {
+  clientKRBots.destroy()
+  process.exit()
+})
