@@ -10,7 +10,8 @@
     "dependencies": {
         "discord.js": "^12.5.3",
         "dokdo": "^0.3.0",
-        "koreanbots": "^2.0.12"
+        "koreanbots": "^2.0.12",
+        "pretty-ms": "^7.0.1"
     },
     "engines": {
         "node": "16.4.1"

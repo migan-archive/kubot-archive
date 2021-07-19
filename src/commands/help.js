@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const pretty = require('pretty-ms');
 
 module.exports = {
     name: "도움말",
@@ -44,6 +45,10 @@ module.exports = {
                 {
                     name: "현재 공지",
                     value: "없음"
+                },
+                {
+                    name: "업타임",
+                    value: `${pretty(client.uptime)}`
                 },
                 {
                     name: "도움 명령어",
