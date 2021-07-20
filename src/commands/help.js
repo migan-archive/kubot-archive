@@ -40,7 +40,7 @@ module.exports = {
                 },
                 {
                     name: "개발자",
-                    value: "미간#8269 입니다."
+                    value: "! 미간 !#8269 입니다."
                 },
                 {
                     name: "현재 공지",
