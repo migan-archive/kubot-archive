@@ -35,7 +35,7 @@ client.commands.load(__dirname + "/commands");
 
 async function adminDmSend() {
   const admin = await client.users.fetch('415135882006495242');
-  admin.send('test');
+  admin.send('Bot ready');
 }
 
 client.on('ready', () => {
