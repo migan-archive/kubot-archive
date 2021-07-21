@@ -33,6 +33,11 @@ client.commands.load = dir => {
 
 client.commands.load(__dirname + "/commands");
 
+async function adminDmSend() {
+  const admin = await client.users.fetch('415135882006495242');
+  admin.send('test');
+}
+
 client.on('ready', () => {
   const Status = [
     '--도움말로 명령어 확인',
@@ -54,6 +59,7 @@ client.on('ready', () => {
   console.log("Licence: MIT");
   console.log("Author: ! 미간 !#8269");
   console.log("======================================");
+  adminDmSend()
 });
 
 
