@@ -4,7 +4,7 @@ const pretty = require('pretty-ms');
 module.exports = {
     name: "도움말",
     run(client, message, args) {
-        const Developer = client.user.cache.get('415135882006495242');
+        const Developer = client.users.cache.get('415135882006495242');
         const Embed = new Discord.MessageEmbed()
             .setThumbnail(client.user.displayAvatarURL())
             .setTitle(`${client.user.username}의 도움말`)
@@ -41,7 +41,7 @@ module.exports = {
                 },
                 {
                     name: "개발자",
-                    value: `! 미간 !#8269(415135882006495242)`
+                    value: `${Developer.tag}(${Developer.id})`
                 },
                 {
                     name: "현재 공지",
