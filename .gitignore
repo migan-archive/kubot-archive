@@ -9,6 +9,10 @@ package-lock.json
 
 # config
 config.json
+.env
 
 # test
 src/test.js
+
+# log
+output.log
