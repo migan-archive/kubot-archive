@@ -41,7 +41,7 @@ module.exports = {
                 },
                 {
                     name: "개발자",
-                    value: `${Developer.tag}(${Developer.id})`
+                    value: `! 미간 !#8269(415135882006495242)`
                 },
                 {
                     name: "현재 공지",
