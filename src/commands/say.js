@@ -1,5 +1,3 @@
-const Discord = require('discord.js');
-
 module.exports = {
     name: "따라해",
     run(client, message, args) {

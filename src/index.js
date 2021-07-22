@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require('fs');
 const prefix = "--"; // 여기에 봇 접두사를 넣으면 됩니다.
-const { KoreanbotsClient } = require("koreanbots")
+const { KoreanbotsClient } = require("koreanbots") /* 만약 당신의 봇이 한디리에 등록 되지 않았다면 이걸 없애주세요 */
 const clientKRBots = new KoreanbotsClient({
   koreanbotsToken: process.env.KORBOTS_TOKEN,
   koreanbotsOptions: {
@@ -14,14 +14,14 @@ const DokdoHandler = new Dokdo(
     client,
     {
       aliases: ['dokdo', 'dok', "독도", "debug", "debugging", "Dok", "Dokdo"],
-      prefix: '--',
-      noPerm: (message) => message.reply("어라? 당신은 개발자가 아닌데요?")
+      prefix: '--', /* 여기 있는 prefix는 독도에 prefix 입니다 */
+      noPerm: (message) => message.reply("어라? 당신은 개발자가 아닌데요?") /* 여기는 개발자가 아닐때 보내는 메세지 입니다. */
   }
-); // 여기있는 prefix 는 Dokdo 커맨드 전용 접두사입니다.
+);
 
 client.commands = new Discord.Collection()
 
-process.env.SHELL = '/bin/bash';
+process.env.SHELL = '/bin/bash'; /* 이건 리눅스 bash 쉘입니다. */
 
 client.commands.load = dir => {
   for (const file of fs.readdirSync(dir)) {
@@ -34,7 +34,7 @@ client.commands.load = dir => {
 client.commands.load(__dirname + "/commands");
 
 async function adminDmSend() {
-  const admin = await client.users.fetch('415135882006495242');
+  const admin = await client.users.fetch('415135882006495242'); // 여기에 있는 id 를 수정해 주셔야 합니다.
   admin.send('Bot ready');
 }
 
@@ -74,6 +74,7 @@ client.on('message', msg => {
           .setTimestamp(Date.now())
           .setFooter(msg.author.tag, msg.author.displayAvatarURL())
   );
+
   if (msg.content === "쿠봇아 안녕" || msg.content === "쿠봇아 안뇽" || msg.content === "쿠봇아 하이") {
     const list = ["안녕", "hi", "안녕하세요", "hello", "좋은아침이에요!"];
     const random = Math.floor(Math.random() * 5);
@@ -109,7 +110,7 @@ client.on('message', msg => {
 
   let cmd = client.commands.get(command);
 
-  if (cmd) cmd.run(client, msg, args);
+  if (cmd) cmd.run(client, msg, args); /* 나중에 핑퐁 빌더로 대화 기능 수정할껍니다. */
 });
 
 
