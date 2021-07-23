@@ -119,4 +119,4 @@ client.login(process.env.TOKEN);
 process.on("SIGINT", () => {
   clientKRBots.destroy()
   process.exit()
-})
+}) /* 이것도 한디리에 등록 되어 있지 않다면 없애 주세요 */
