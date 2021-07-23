@@ -1,3 +1,4 @@
+require('dotenv').config();
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require('fs');
@@ -18,6 +19,7 @@ const DokdoHandler = new Dokdo(
       noPerm: (message) => message.reply("어라? 당신은 개발자가 아닌데요?") /* 여기는 개발자가 아닐때 보내는 메세지 입니다. */
   }
 );
+const help = require('./commands/help.js');
 
 client.commands = new Discord.Collection()
 
@@ -70,7 +72,7 @@ client.on('message', msg => {
       new Discord.MessageEmbed()
           .setColor("00FF21")
           .setTitle(`${client.user.username}이에요!`)
-          .setDescription(`저의 접두사는 \`${prefix}\`이에요!\n\`${prefix}도움말\`로 명령어를 확인해 주세요!`)
+          .setDescription(`저의 접두사는 \`${prefix}\`이에요!\n\`${prefix}${help.name}\`로 명령어를 확인해 주세요!`)
           .setTimestamp(Date.now())
           .setFooter(msg.author.tag, msg.author.displayAvatarURL())
   );

@@ -2,14 +2,13 @@
 이 봇은 관리 등 여러 기능이 있는 봇입니다.
 
 ## 소개
-1. 관리와 재미를 목적으로 만들어졌습니다.
+1. 관리와 대화를 목적으로 만들어졌습니다.
 2. 당신의 디스코드방을 편리하게 만듭니다.
 
 ## 기능
 + 관리 명령어
 + 일반 명령어
-+ 개발 명령어
-
++ 도움 명령어
 ## Kubot의 웹사이트
 [웹사이트 바로가기](https://kubot.netlify.app/)
 
@@ -70,23 +69,29 @@ yarn
 ```
 
 ## 사용법
-1. index.js를 여셔서 bot실행 구문에 아래처럼 바꾸주세요!
-```javascript
-client.login(process.env.TOKEN);
+1. 프로젝트 폴더 안에서 .env 를 만들고 아래처럼 해주세요.
++ 이 방법은 ubuntu 외에선 테스트를 안해 보았습니다.
 ```
-이렇게
-```javascript
-client.login("YOUR_BOT_TOKEN");
+TOKEN = 'YOUR_BOT_TOKEN'
+KORBOTS_TOKEN = 'YOUR_KORBOTS_TOKEN'
 ```
 
-2. Procfile, Aptfile은 없애주시고 (원한다면 .gitignore 도 없애도됨) 사용해 주세요.
+3. Procfile, Aptfile은 없애주시고 (원한다면 .gitignore 도 없애도됨) 사용해 주세요.
 
 + 코드를 변형해서 사용 하셔도 됩니다.
 
 3. 그리고 다하셨다면 콘솔창에다가 아래의 문구를 써주세요.
+
++ npm
 ```zsh
-npm run r
+npm run start
 ```
+
++ yarn
+```zsh
+yarn start
+```
+
 4. 이봇은 commandHandler 로 파일을 나누어 놓았습니다. 봇의 커맨드를 바꾸실려면 src/commands 폴더안 .js 파일을 수정해 주세요.
 
 5. 그리고 숨김폴더로 .git이 있을텐데 그것도 없애주세요.
