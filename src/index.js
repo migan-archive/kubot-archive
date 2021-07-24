@@ -36,8 +36,8 @@ client.commands.load = dir => {
 client.commands.load(__dirname + "/commands");
 
 async function adminDmSend() {
-  const admin = await client.users.fetch('415135882006495242'); // 여기에 있는 id 를 수정해 주셔야 합니다.
-  admin.send('Bot ready');
+  const admin = await client.users.fetch('415135882006495242'); // 여기에 있는 id 는 수정해 주셔야 합니다.
+  await admin.send('Bot ready');
 }
 
 client.on('ready', () => {
@@ -61,21 +61,22 @@ client.on('ready', () => {
   console.log("Licence: MIT");
   console.log("Author: ! 미간 !#8269");
   console.log("======================================");
-  adminDmSend()
+  adminDmSend().catch(console.error);
 });
 
 
 client.on('message', msg => {
   if (msg.author.bot) return;
   DokdoHandler.run(msg);
-  if (msg.content === `<@!${client.user.id}>`) return msg.reply(
-      new Discord.MessageEmbed()
+  if (msg.content === `<@!${client.user.id}>`) {
+      const Embed = new Discord.MessageEmbed()
           .setColor("00FF21")
           .setTitle(`${client.user.username}이에요!`)
           .setDescription(`저의 접두사는 \`${prefix}\`이에요!\n\`${prefix}${help.name}\`로 명령어를 확인해 주세요!`)
           .setTimestamp(Date.now())
-          .setFooter(msg.author.tag, msg.author.displayAvatarURL())
-  );
+          .setFooter(msg.author.tag, msg.author.displayAvatarURL());
+    msg.reply(Embed);
+  }
 
   if (msg.content === "쿠봇아 안녕" || msg.content === "쿠봇아 안뇽" || msg.content === "쿠봇아 하이") {
     const list = ["안녕", "hi", "안녕하세요", "hello", "좋은아침이에요!"];
