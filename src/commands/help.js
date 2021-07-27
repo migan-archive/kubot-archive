@@ -3,6 +3,7 @@ const pretty = require('pretty-ms');
 
 module.exports = {
     name: "도움말",
+    aliases: ["help", "도움", "명령어", "command"],
     run(client, message, args) {
         const Developer = client.users.cache.get('415135882006495242');
         const Embed = new Discord.MessageEmbed()
@@ -45,7 +46,7 @@ module.exports = {
                 },
                 {
                     name: "현재 공지",
-                    value: "없음"
+                    value: "문의 명령어가 리뉴얼 되었습니다."
                 },
                 {
                     name: "업타임",
@@ -65,7 +66,7 @@ module.exports = {
                 },
                 {
                     name: "관리 명령어",
-                    value: "**`킥`**, **`밴`**, **`청소`**"
+                    value: "**`킥(추방)`**, **`밴(차단)`**, **`청소`**"
                 },
                 {
                     name: `${client.user.username}이랑 대화 하고 싶다면 \`쿠봇아 \`를 붙혀 주세요!`,

@@ -111,7 +111,9 @@ client.on('message', msg => {
   const args = msg.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
-  let cmd = client.commands.get(command);
+  let cmd = client.commands.get(command) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(command));
+
+  if (!command) return;
 
   if (cmd) cmd.run(client, msg, args); /* 나중에 핑퐁 빌더로 대화 기능 수정할껍니다. */
 });
