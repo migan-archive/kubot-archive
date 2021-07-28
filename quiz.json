@@ -6,5 +6,21 @@
     {
         "question": "7 x 9 는?",
         "answer": ["63"]
+    },
+    {
+        "question": "대한민국의 수도는?",
+        "answer": ["서울"]
+    },
+    {
+        "question": "영국의 수도는?",
+        "answer": ["런던"]
+    },
+    {
+        "question": "일본의 수도는?",
+        "answer": ["도쿄"]
+    },
+    {
+        "question": "프랑스의 수도는?",
+        "answer": ["파리"]
     }
 ]
