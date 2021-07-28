@@ -66,7 +66,7 @@ client.on('ready', () => {
   console.log("Licence: MIT");
   console.log("Author: ! 미간 !#8269");
   console.log("======================================");
-  adminDmSend().catch(console.error);
+  adminDmSend();
 });
 
 
