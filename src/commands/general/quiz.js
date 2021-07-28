@@ -5,7 +5,7 @@ module.exports = {
     aliases: ["quiz"],
     run(client, message, args) {
         const item = quiz[Math.floor(Math.random() * quiz.length)];
-        const limit = 3;
+        const limit = 5;
 
         const filter = (response) => {
             return item.answer.some((answer) => answer === response.content);
