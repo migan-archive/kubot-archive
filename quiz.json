@@ -1,0 +1,10 @@
+[
+    {
+        "question": "이봇에 이름은?",
+        "answer": ["Kubot", "kubot", "쿠봇"]
+    },
+    {
+        "question": "7 x 9 는?",
+        "answer": ["63"]
+    }
+]
