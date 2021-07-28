@@ -18,7 +18,7 @@ module.exports = {
                         message.channel.send(`${collected.first().author} 정답!`);
                     })
                     .catch((err) => {
-                        message.channel.send('제한시간 초과!');
+                        message.channel.send(`제한시간 초과! 정답: ${item.answer}`);
                     });
             });
     }
