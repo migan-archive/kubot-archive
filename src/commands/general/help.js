@@ -67,6 +67,10 @@ module.exports = {
                 {
                     name: "유틸리티",
                     value: "핑(ping), 프로필, 랜덤숫자, 따라해, 업타임"
+                },
+                {
+                    name: `${client.user.username}이랑 대화 하고 싶다면 \`쿠봇아 \`를 붙혀 주세요!`,
+                    value: `ex) 쿠봇아 안녕`
                 }
             )
             .setTimestamp(Date.now())
