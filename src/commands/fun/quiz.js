@@ -2,7 +2,7 @@ const quiz = require('../../../quiz.json');
 
 module.exports = {
     name: "퀴즈",
-    aliases: ["quiz"],
+    aliases: ["quiz", "QUIZ"],
     run(client, message, args) {
         const item = quiz[Math.floor(Math.random() * quiz.length)];
         const limit = 5;

@@ -54,7 +54,7 @@ module.exports = {
                 },
                 {
                     name: "재미",
-                    value: "퀴즈"
+                    value: "퀴즈(quiz, QUIZ)"
                 },
                 {
                     name: "일반",
