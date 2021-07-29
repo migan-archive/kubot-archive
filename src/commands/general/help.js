@@ -3,7 +3,7 @@ const pretty = require('pretty-ms');
 
 module.exports = {
     name: "도움말",
-    aliases: ["help", "도움", "명령어", "command"],
+    aliases: ["help", "도움", "명령어", "commands", "HELP"],
     run(client, message, args) {
         const Developer = client.users.cache.get('415135882006495242');
         const Embed = new Discord.MessageEmbed()
@@ -53,29 +53,21 @@ module.exports = {
                     value: `${pretty(client.uptime)}`
                 },
                 {
-                    name: "도움 명령어",
-                    value: "**`문의`**"
+                    name: "재미",
+                    value: "퀴즈"
                 },
                 {
-                    name: "일반 명령어",
-                    value: "**`랜덤숫자`**, **`따라해`**, **`퀴즈(quiz)`**"
+                    name: "일반",
+                    value: "도움말(help, 도움, 명령어, commands, HELP), 문의"
                 },
                 {
-                    name: "정보 명령어",
-                    value: "**`프로필`**, **`핑`**, **`업타임`**"
+                    name: "관리",
+                    value: "밴(차단), 킥(추방), 청소(채팅청소)"
                 },
                 {
-                    name: "관리 명령어",
-                    value: "**`킥(추방)`**, **`밴(차단)`**, **`청소`**"
-                },
-                {
-                    name: `${client.user.username}이랑 대화 하고 싶다면 \`쿠봇아 \`를 붙혀 주세요!`,
-                    value: `ex) 쿠봇아 안녕`
+                    name: "유틸리티",
+                    value: "핑(ping), 프로필, 랜덤숫자, 따라해, 업타임"
                 }
-                // {
-                //     name: "임시삭제 명령어",
-                //     value: "없음"
-                // },
             )
             .setTimestamp(Date.now())
             .setFooter(message.author.tag, message.author.displayAvatarURL());

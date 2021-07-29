@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 
 module.exports = {
     name: "청소",
+    aliases: ["채팅청소"],
     async run(client, message, args) {
         if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("당신은 권한이 부족해요!");
         if (!args[0]) return message.reply("지울 메세지의 갯수를 입력해 주세요!");

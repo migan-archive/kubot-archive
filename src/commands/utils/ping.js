@@ -1,5 +1,6 @@
 module.exports = {
     name: "핑",
+    aliases: ["ping"],
     run(client, message, args) {
         const Discord = require('discord.js');
         const Embed = new Discord.MessageEmbed()
