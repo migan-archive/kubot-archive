@@ -9,7 +9,6 @@ yarn.lock
 
 
 # config
-config.json
 .env
 
 # test
