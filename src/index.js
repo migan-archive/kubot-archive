@@ -14,12 +14,19 @@ const Dokdo = require('dokdo');
 const DokdoHandler = new Dokdo(
   client,
   {
-    aliases: ['dokdo', 'dok', "독도", "debug", "debugging", "Dok", "Dokdo"],
-    prefix: prefix, /* 여기 있는 prefix는 독도에 prefix 입니다 */
+    aliases: [
+      'dokdo',
+      'dok',
+      "독도",
+      "debug",
+      "debugging",
+      "Dok",
+      "Dokdo"
+    ],
+    prefix: prefix,
     noPerm: (message) => message.reply("어라? 당신은 개발자가 아닌데요?") /* 여기는 개발자가 아닐때 보내는 메세지 입니다. */
   }
 );
-// const help = require('./commands/general/help.js');
 
 client.commands = new Discord.Collection()
 
@@ -46,26 +53,11 @@ async function adminDmSend() {
 }
 
 client.on('ready', () => {
-  const Status = [
-    '--도움말로 명령어 확인',
-    '더욱더 발전하겠습니다',
-    '이 메세지는 10초마다 한번씩 바뀝니다',
-    '디스코드서버를 편리하게'
-  ];
-
-  let index = 0;
-  setInterval(() => {
-    if (index === Status.length) index = 0;
-    const status1 = Status[index];
-    client.user.setActivity(status1, {
-      type: 'PLAYING'
-    }).catch(console.error)
-    index++;
-  }, 10000);
   console.log(`Login: ${client.user.tag}`);
   console.log("Licence: MIT");
   console.log("Author: ! 미간 !#8269");
   console.log("======================================");
+  client.user.setActivity(`${prefix}도움말`, { type: "PLAYING" });
   adminDmSend();
 });
 
