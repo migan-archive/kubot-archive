@@ -4,13 +4,14 @@
     "description": "discord Kubot",
     "main": "src/index.js",
     "scripts": {
-        "start": "node src"
+        "start": "nodemon src"
     },
     "dependencies": {
         "discord.js": "^12.5.3",
         "dokdo": "^0.3.0",
         "dotenv": "^10.0.0",
         "koreanbots": "^2.0.12",
+        "nodemon": "^2.0.12",
         "pretty-ms": "^7.0.1"
     },
     "engines": {
