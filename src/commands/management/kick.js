@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 module.exports = {
     name: "킥",
-    aliases: ["추방"],
+    aliases: ["추방", "kick"],
     async run(client, message, args) {
         if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("당신은 이 명령어를 사용할 권한이 없습니다!");
         const mentionMember = message.mentions.members.first();

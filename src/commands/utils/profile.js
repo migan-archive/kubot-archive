@@ -1,5 +1,6 @@
 module.exports = {
     name: "프로필",
+    aliases: ["profile", "유저정보", "userinfo", "ui"],
     run(client, message, args) {
         const Discord = require('discord.js');
         const guild = new Discord.Guild(client);
@@ -8,7 +9,7 @@ module.exports = {
         const Embed = new Discord.MessageEmbed()
             .setTitle(`${user.username}님의 프로필`)
             .setThumbnail(`${user.displayAvatarURL()}`)
-            .setColor("00FF21")
+            .setColor(client.EmbedColor)
             .addFields(
                 {
                     name: "이름",

@@ -28,7 +28,9 @@ const DokdoHandler = new Dokdo(
   }
 );
 
-client.commands = new Discord.Collection()
+client.commands = new Discord.Collection();
+
+client.EmbedColor = "00FF21";
 
 process.env.SHELL = '/bin/bash'; /* 이건 리눅스 bash 쉘입니다. */
 
@@ -47,18 +49,12 @@ client.commands.load = dir => {
 
 client.commands.load(__dirname + "/commands");
 
-async function adminDmSend() {
-  const admin = await client.users.fetch('415135882006495242'); // 여기에 있는 id 는 수정해 주셔야 합니다.
-  await admin.send('Bot ready');
-}
-
 client.on('ready', () => {
   console.log(`Login: ${client.user.tag}`);
   console.log("Licence: MIT");
   console.log("Author: ! 미간 !#8269");
   console.log("======================================");
   client.user.setActivity(`${prefix}도움말`, { type: "PLAYING" });
-  adminDmSend();
 });
 
 
@@ -68,7 +64,7 @@ client.on('message', msg => {
   DokdoHandler.run(msg);
   if (msg.content === `<@!${client.user.id}>`) {
     const Embed = new Discord.MessageEmbed()
-      .setColor("00FF21")
+      .setColor(client.EmbedColor)
       .setTitle(`${client.user.username}이에요!`)
       .setDescription(`저의 접두사는 \`${prefix}\`이에요!\n\`${prefix}도움말\`로 명령어를 확인해 주세요!`)
       .setTimestamp(Date.now())

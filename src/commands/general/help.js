@@ -10,7 +10,7 @@ module.exports = {
             .setThumbnail(client.user.displayAvatarURL())
             .setTitle(`${client.user.username}의 도움말`)
             .setDescription("봇 접두사=**`--`**")
-            .setColor("#00FF21")
+            .setColor(client.EmbedColor)
             .addFields(
                 {
                     name: "당신의 디스코드방을 편리하게 만듭니다.",
@@ -58,15 +58,19 @@ module.exports = {
                 },
                 {
                     name: "일반",
-                    value: "도움말(help, 도움, 명령어, commands, HELP), 문의"
+                    value: "도움말(help, 도움, 명령어, commands, HELP), 문의(support)"
                 },
                 {
                     name: "관리",
-                    value: "밴(차단), 킥(추방), 청소(채팅청소)"
+                    value: "밴(차단, ban), 킥(추방, kick), 청소(채팅청소, clear)"
                 },
                 {
                     name: "유틸리티",
-                    value: "핑(ping), 프로필, 랜덤숫자, 따라해, 업타임"
+                    value: "핑(ping), 프로필(proflie, 유저정보, userinfo, ui), 랜덤숫자, 따라해, 업타임(uptime)"
+                },
+                {
+                    name: "봇 개발자 전용 명령어",
+                    value: "dokdo(dok, Dok, debug, debugging, Dokdo, 독도)"
                 },
                 {
                     name: `${client.user.username}이랑 대화 하고 싶다면 \`쿠봇아 \`를 붙혀 주세요!`,

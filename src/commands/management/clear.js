@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 module.exports = {
     name: "청소",
-    aliases: ["채팅청소"],
+    aliases: ["채팅청소", "clear"],
     async run(client, message, args) {
         if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("당신은 권한이 부족해요!");
         if (!args[0]) return message.reply("지울 메세지의 갯수를 입력해 주세요!");
@@ -15,7 +15,7 @@ module.exports = {
         });
         message.channel.send(
             new Discord.MessageEmbed()
-                .setColor("00FF21")
+                .setColor(client.EmbedColor)
                 .setTitle("채팅 청소")
                 .setDescription(`관리자 ${message.author.username}님의 요청으로 채팅 ${args[0]}개가 삭제되었습니다!`)
                 .setTimestamp(Date.now())
