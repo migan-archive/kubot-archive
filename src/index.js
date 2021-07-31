@@ -64,6 +64,7 @@ client.on('ready', () => {
 
 client.on('message', msg => {
   if (msg.author.bot) return;
+  if (msg.channel.type == "dm") return;
   DokdoHandler.run(msg);
   if (msg.content === `<@!${client.user.id}>`) {
     const Embed = new Discord.MessageEmbed()
