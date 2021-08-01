@@ -73,7 +73,6 @@ yarn
 + 이 방법은 ubuntu 외에선 테스트를 안해 보았습니다.
 ```
 TOKEN = 'YOUR_BOT_TOKEN'
-KORBOTS_TOKEN = 'YOUR_KORBOTS_TOKEN'
 ```
 
 3. Procfile, Aptfile은 없애주시고 (원한다면 .gitignore 도 없애도됨) 사용해 주세요.
