@@ -60,6 +60,11 @@ module.exports = {
                     inline: true
                 },
                 {
+                    name: "웹소켓 핑",
+                    value: `\`${client.ws.ping}\``,
+                    inline: true
+                },
+                {
                     name: "discord.js 버젼",
                     value: `\`${Discord.version}\``,
                     inline: true
