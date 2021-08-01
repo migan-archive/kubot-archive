@@ -7,7 +7,7 @@ module.exports = {
         let text = args.join(" ");
         if (!text) return message.reply("문의사항을 적어주세요!");
 
-        const admin = await client.users.fetch('415135882006495242'); // 여기에 있는 id 는 수정해 주셔야 합니다.
+        const admin = await client.users.fetch(client.owners); // 여기에 있는 id 는 수정해 주셔야 합니다.
 
         const date = new Date().getFullYear() + '/' + new Date().getMonth() + 1 + '/' + new Date().getDate();
 
