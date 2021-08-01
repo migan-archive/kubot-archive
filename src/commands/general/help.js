@@ -5,7 +5,7 @@ module.exports = {
     name: "도움말",
     aliases: ["help", "도움", "명령어", "commands", "HELP"],
     run(client, message, args) {
-        const Developer = client.users.cache.get('415135882006495242');
+        const Developer = client.users.cache.get(client.owners);
         const Embed = new Discord.MessageEmbed()
             .setThumbnail(client.user.displayAvatarURL())
             .setTitle(`${client.user.username}의 도움말`)

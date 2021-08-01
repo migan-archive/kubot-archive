@@ -32,6 +32,8 @@ client.commands = new Discord.Collection();
 
 client.EmbedColor = "00FF21";
 
+client.owners = "415135882006495242"; // 여기 있는 오너 아이디를 바꿔주셔야 합니다. 
+
 process.env.SHELL = '/bin/bash'; /* 이건 리눅스 bash 쉘입니다. */
 
 client.commands.load = dir => {
