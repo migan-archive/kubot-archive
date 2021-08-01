@@ -61,7 +61,7 @@ module.exports = {
                 },
                 {
                     name: "웹소켓 핑",
-                    value: `\`${client.ws.ping}\``,
+                    value: `\`${client.ws.ping}\`ms`,
                     inline: true
                 },
                 {
