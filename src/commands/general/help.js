@@ -70,7 +70,7 @@ module.exports = {
                 },
                 {
                     name: "봇 개발자 전용 명령어",
-                    value: "dokdo(dok, Dok, debug, debugging, Dokdo, 독도), eval(Eval, 이발)"
+                    value: "dokdo(dok, Dok, debug, debugging, Dokdo, 독도), eval(Eval, 이발), dev(DEV, Dev)"
                 },
                 {
                     name: `${client.user.username}이랑 대화 하고 싶다면 \`쿠봇아 \`를 붙혀 주세요!`,
