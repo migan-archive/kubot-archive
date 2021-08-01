@@ -52,7 +52,7 @@ ${error}\`\`\``
                 .setFooter(message.author.tag, message.author.displayAvatarURL());
 
             message.channel.send(Embed);
-            message.react('❗');
+            message.react('⚠️');
             // admin.send(Embed);
         }
     }
