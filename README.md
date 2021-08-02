@@ -1,5 +1,9 @@
 # Kubot
 
+[![Votes](https://koreanbots.dev/api/widget/bots/votes/704999866094452816.svg?style=classic&scale=1.5)](https://koreanbots.dev/bots/704999866094452816)
+[![Servers](https://koreanbots.dev/api/widget/bots/servers/704999866094452816.svg?style=classic&scale=1.5)](https://koreanbots.dev/bots/704999866094452816)
+[![Status](https://koreanbots.dev/api/widget/bots/status/704999866094452816.svg?style=classic&scale=1.5)](https://koreanbots.dev/bots/704999866094452816)
+
 - 개발 할때 쓴 node.js버전, 라이브러리 버전을 적어두었습니다.
 
 ## 사용된 node.js 버전
