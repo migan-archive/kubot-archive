@@ -8,7 +8,7 @@ module.exports = {
         const user = message.mentions.users.first() || message.author;
         const Embed = new Discord.MessageEmbed()
             .setTitle(`${user.username}님의 프로필`)
-            .setThumbnail(`${user.displayAvatarURL()}`)
+            .setThumbnail(`${user.displayAvatarURL({ dynamic: true })}`)
             .setColor(client.EmbedColor)
             .addFields(
                 {
