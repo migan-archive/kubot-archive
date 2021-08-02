@@ -64,7 +64,7 @@ client.on('message', msg => {
   if (msg.author.bot) return;
   if (msg.channel.type == "dm") return;
   DokdoHandler.run(msg);
-  if (msg.content === `<@!${client.user.id}>`) {
+  if (msg.content.includes(`<@!${client.user.id}>`)) {
     const Embed = new Discord.MessageEmbed()
       .setColor(client.EmbedColor)
       .setTitle(`${client.user.username}이에요!`)
