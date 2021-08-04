@@ -17,7 +17,7 @@ module.exports = {
                 },
                 {
                     name: "가입일",
-                    value: new Date(user.createdTimestamp).toLocaleDateString()
+                    value: new Date(user.createdTimestamp).toLocaleDateString('ko-KR', { timeZone: 'Asia/Seoul' })
                 },
                 {
                     name: "ID",
