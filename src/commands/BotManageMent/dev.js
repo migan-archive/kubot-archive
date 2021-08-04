@@ -9,6 +9,7 @@ module.exports = {
 
         const os = require('os');
 
+        let modules = require(process.cwd() + "/package.json");
         const DokdoVer = require('../../../node_modules/dokdo/package.json');
 
         const KorenBotsVer = require('../../../node_modules/koreanbots/package.json');
@@ -63,40 +64,18 @@ module.exports = {
                     name: "웹소켓 핑",
                     value: `\`${client.ws.ping}\`ms`,
                     inline: true
-                },
-                {
-                    name: "discord.js 버젼",
-                    value: `\`${Discord.version}\``,
-                    inline: true
-                },
-                {
-                    name: "dokdo 버젼",
-                    value: `\`${DokdoVer.version}\``,
-                    inline: true
-                },
-                {
-                    name: "dotenv 버젼",
-                    value: `\`${dotenvVer.version}\``,
-                    inline: true
-                },
-                {
-                    name: "koreanbots 버젼",
-                    value: `\`${KorenBotsVer.version}\``,
-                    inline: true
-                },
-                {
-                    name: "nodemon 버젼",
-                    value: `\`${nodemonVer.version}\``,
-                    inline: true
-                },
-                {
-                    name: "pretty-ms 버젼",
-                    value: `\`${prettyVer.version}\``,
-                    inline: true
                 }
             )
             .setTimestamp(Date.now())
             .setFooter(message.author.tag, message.author.displayAvatarURL());
+        for (let module of Object.entries(modules.dependencies)) {
+            Embed.addField(module[0], '`' + remove(module[1]) + '`', true);
+        }
+        function remove(string) {
+            if (string.startsWith('^')) {
+                return string.replace('^', '');
+            } else return string;
+        }
 
         message.channel.send(Embed);
     }
