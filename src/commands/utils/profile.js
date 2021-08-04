@@ -1,10 +1,9 @@
+const Discord = require('discord.js');
+
 module.exports = {
     name: "프로필",
     aliases: ["profile", "유저정보", "userinfo", "ui"],
     run(client, message, args) {
-        const Discord = require('discord.js');
-        const guild = new Discord.Guild(client);
-        const member = new Discord.GuildMember(client, guild);
         const user = message.mentions.users.first() || message.author;
         const Embed = new Discord.MessageEmbed()
             .setTitle(`${user.username}님의 프로필`)
