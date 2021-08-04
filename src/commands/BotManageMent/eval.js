@@ -17,12 +17,12 @@ module.exports = {
                 .setTitle("Eval")
                 .addFields(
                     {
-                        name: "입력",
+                        name: "입력:",
                         value: `\`\`\`js
 ${args.join(' ')}\`\`\``
                     },
                     {
-                        name: "출력",
+                        name: "출력:",
                         value: `\`\`\`js
 ${inspect(evaled)}\`\`\``
                     }
@@ -38,12 +38,12 @@ ${inspect(evaled)}\`\`\``
                 .setTitle("Eval")
                 .addFields(
                     {
-                        name: "입력",
+                        name: "입력:",
                         value: `\`\`\`js
 ${args.join(' ')}\`\`\``
                     },
                     {
-                        name: "출력",
+                        name: "출력:",
                         value: `\`\`\`js
 ${error}\`\`\``
                     }
