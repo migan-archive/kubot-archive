@@ -10,16 +10,6 @@ module.exports = {
         const os = require('os');
 
         let modules = require(process.cwd() + "/package.json");
-        const DokdoVer = require('../../../node_modules/dokdo/package.json');
-
-        const KorenBotsVer = require('../../../node_modules/koreanbots/package.json');
-
-        const dotenvVer = require('../../../node_modules/dotenv/package.json');
-
-        const nodemonVer = require('../../../node_modules/nodemon/package.json');
-
-        const prettyVer = require('../../../node_modules/pretty-ms/package.json');
-
         const Embed = new Discord.MessageEmbed()
             .setColor(client.EmbedColor)
             .setTitle('개발 정보')
