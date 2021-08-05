@@ -58,7 +58,7 @@ module.exports = {
                 },
                 {
                     name: "일반",
-                    value: "도움말(help, 도움, 명령어, commands, HELP), 문의(support)"
+                    value: "도움말(help, 도움, 명령어, commands, HELP), 문의(support), 개발자"
                 },
                 {
                     name: "관리",
