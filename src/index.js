@@ -9,7 +9,10 @@ const DokdoHandler = new Dokdo(
   {
     aliases: ['dokdo', 'dok', "독도", "debug", "debugging", "Dok", "Dokdo"],
     prefix: prefix,
-    noPerm: (message) => message.reply("어라? 당신은 개발자가 아닌데요?") /* 여기는 개발자가 아닐때 보내는 메세지 입니다. */
+    noPerm: msg => {
+      msg.react('❌');
+      msg.reply("어라? 당신은 개발자가 아닌데요?");
+    } /* 여기는 개발자가 아닐때 보내는 메세지 입니다. */
   }
 );
 
