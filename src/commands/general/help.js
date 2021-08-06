@@ -58,19 +58,19 @@ module.exports = {
                 },
                 {
                     name: "일반",
-                    value: "도움말(help, 도움, 명령어, commands, HELP), 문의(support), 개발자"
+                    value: "`도움말(help, 도움, 명령어, commands, HELP)`, `문의(support), 개발자`"
                 },
                 {
                     name: "관리",
-                    value: "밴(차단, ban), 킥(추방, kick), 청소(채팅청소, clear)"
+                    value: "`밴(차단, ban), 킥(추방, kick)`, `청소(채팅청소, clear)`"
                 },
                 {
                     name: "유틸리티",
-                    value: "핑(ping), 프로필(proflie, 유저정보, userinfo, ui), 랜덤숫자, 따라해, 업타임(uptime)"
+                    value: "`핑(ping)`, `프로필(proflie`, `유저정보`, `userinfo, (ui)`, `랜덤숫자`, `따라해`, `업타임(uptime)`"
                 },
                 {
                     name: "봇 개발자 전용 명령어",
-                    value: "dokdo(dok, Dok, debug, debugging, Dokdo, 독도), eval(Eval, 이발), dev(DEV, Dev)"
+                    value: "`dokdo(dok, Dok, debug, debugging, Dokdo, 독도)`, `eval(Eval, 이발)`, `dev(DEV, Dev)`"
                 },
                 {
                     name: `${client.user.username}이랑 대화 하고 싶다면 \`쿠봇아 \`를 붙혀 주세요!`,
