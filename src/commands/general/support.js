@@ -21,11 +21,11 @@ module.exports = {
 
         const SupportEmbed = new Discord.MessageEmbed()
             .setColor(client.EmbedColor)
-            .setTitle("문의 내역")
+            .setTitle("새문의")
             .setThumbnail(client.user.displayAvatarURL())
             .setDescription(`-------------------------\n\n\`${text}\`\n\n문의 작성일자: \`${new Date().getFullYear()}/${new Date().getMonth() + 1}/${new Date().getDate()}\`\n-------------------------`)
-            .setTimestamp(Date.now());
-        // .setFooter(`문의 작성자: ${message.author.tag}`, message.author.displayAvatarURL());
+            .setTimestamp(Date.now())
+            .setFooter(`문의 작성자: ${message.author.tag}`, message.author.displayAvatarURL());
 
         await admin.send(SupportEmbed);
         await message.react("✅");
