@@ -3,26 +3,11 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require('fs');
 const { prefix } = require('../config.json'); // 여기에 봇 접두사를 넣으면 됩니다.
-// const { KoreanbotsClient } = require("koreanbots") /* 만약 당신의 봇이 한디리에 등록 되지 않았다면 이걸 없애주세요 */
-// // const clientKRBots = new KoreanbotsClient({
-// //   koreanbotsToken: process.env.KORBOTS_TOKEN,
-// //   koreanbotsOptions: {
-// //     interval: 600000 //10분마다 서버 수를 업데이트합니다. (기본값 30분)
-// //   }
-// // })
 const Dokdo = require('dokdo');
 const DokdoHandler = new Dokdo(
   client,
   {
-    aliases: [
-      'dokdo',
-      'dok',
-      "독도",
-      "debug",
-      "debugging",
-      "Dok",
-      "Dokdo"
-    ],
+    aliases: ['dokdo', 'dok', "독도", "debug", "debugging", "Dok", "Dokdo"],
     prefix: prefix,
     noPerm: (message) => message.reply("어라? 당신은 개발자가 아닌데요?") /* 여기는 개발자가 아닐때 보내는 메세지 입니다. */
   }
@@ -61,8 +46,7 @@ client.on('ready', () => {
 
 
 client.on('message', msg => {
-  if (msg.author.bot) return;
-  if (msg.channel.type == "dm") return;
+  if (msg.author.bot || msg.channel.type == "dm") return;
   DokdoHandler.run(msg);
   if (msg.content.includes(`<@!${client.user.id}>`)) {
     const Embed = new Discord.MessageEmbed()
@@ -116,8 +100,3 @@ client.on('message', msg => {
 
 
 client.login(process.env.TOKEN);
-
-// process.on("SIGINT", () => {
-//   clientKRBots.destroy()
-//   process.exit()
-// }) /* 이것도 한디리에 등록 되어 있지 않다면 없애 주세요 */
