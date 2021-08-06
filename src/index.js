@@ -2,7 +2,7 @@ require('dotenv').config();
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require('fs');
-const { prefix } = require('../config.json'); // 여기에 봇 접두사를 넣으면 됩니다.
+const { prefix } = require('../config.json'); // 이 파일 안에 접두사를 넣으면 됩니다.
 const Dokdo = require('dokdo');
 const DokdoHandler = new Dokdo(
   client,
