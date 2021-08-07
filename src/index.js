@@ -42,7 +42,7 @@ client.commands.load(__dirname + "/commands");
 client.on('ready', () => {
   console.log(`Login: ${client.user.tag}`);
   console.log("Licence: MIT");
-  console.log("Author: ! 미간 !#8269");
+  console.log("Author: ! 미간 !#8269"); // 이건 수정 하시면 안됩니다.
   console.log("======================================");
   client.user.setActivity(`${prefix}도움말`, { type: "PLAYING" });
 });
