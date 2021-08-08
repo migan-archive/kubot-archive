@@ -46,7 +46,7 @@ module.exports = {
                 },
                 {
                     name: "현재 공지",
-                    value: "퀴즈 명령어가 새로 생겼습니다!"
+                    value: "v13으로 이전을 했습니다. 따라서 다음과 같은 명령어를 사용 못합니다.\n퀴즈\n따라해"
                 },
                 {
                     name: "업타임",
@@ -79,6 +79,6 @@ module.exports = {
             )
             .setTimestamp(Date.now())
             .setFooter(message.author.tag, message.author.displayAvatarURL());
-        message.channel.send(Embed);
+        message.reply({ embeds: [Embed] });
     }
 }

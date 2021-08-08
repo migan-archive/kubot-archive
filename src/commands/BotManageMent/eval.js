@@ -1,5 +1,5 @@
 const { inspect } = require('util');
-const Discord = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: "eval",
@@ -12,7 +12,7 @@ module.exports = {
         try {
             evaled = await eval(args.join(' '));
 
-            const Embed = new Discord.MessageEmbed()
+            const Embed = new MessageEmbed()
                 .setColor(client.EmbedColor)
                 .setTitle("Eval")
                 .addFields(
@@ -30,10 +30,10 @@ ${inspect(evaled)}\`\`\``
                 .setTimestamp(Date.now())
                 .setFooter(message.author.tag, message.author.displayAvatarURL());
             message.react('✅');
-            message.channel.send(Embed);
+            message.channel.send({ embeds: [Embed] });
         }
         catch (error) {
-            const Embed = new Discord.MessageEmbed()
+            const Embed = new MessageEmbed()
                 .setColor(client.EmbedColor)
                 .setTitle("Eval")
                 .addFields(
@@ -51,7 +51,7 @@ ${error}\`\`\``
                 .setTimestamp(Date.now())
                 .setFooter(message.author.tag, message.author.displayAvatarURL());
 
-            message.channel.send(Embed);
+            message.channel.send({ embeds: [Embed] });
             message.react('⚠️');
             // admin.send(Embed);
         }

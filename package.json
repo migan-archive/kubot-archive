@@ -1,17 +1,16 @@
 {
     "name": "kubot",
-    "version": "4.0.0",
+    "version": "4.1.0-dev.0",
     "description": "discord Kubot",
     "main": "src/index.js",
     "scripts": {
         "start": "nodemon src"
     },
     "dependencies": {
-        "discord.js": "^12.5.3",
-        "dokdo": "^0.4.1",
+        "discord.js": "^13.0.1",
+        "dokdo": "github:mome0320/dokdo#support-djs-v13",
         "dotenv": "^10.0.0",
         "nodemon": "^2.0.12",
         "pretty-ms": "^7.0.1"
-    },
-    "devDependencies": {}
+    }
 }

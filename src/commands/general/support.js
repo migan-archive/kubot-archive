@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: "문의",
@@ -9,9 +9,7 @@ module.exports = {
 
         const admin = await client.users.fetch(client.owners); // 여기에 있는 id 는 수정해 주셔야 합니다.
 
-        const date = new Date().getFullYear() + '/' + new Date().getMonth() + 1 + '/' + new Date().getDate();
-
-        const SuccessEmbed = new Discord.MessageEmbed()
+        const SuccessEmbed = new MessageEmbed()
             .setColor(client.EmbedColor)
             .setTitle("문의")
             .setThumbnail(client.user.displayAvatarURL())
@@ -19,7 +17,7 @@ module.exports = {
             .setTimestamp(Date.now())
             .setFooter(message.author.tag, message.author.displayAvatarURL());
 
-        const SupportEmbed = new Discord.MessageEmbed()
+        const SupportEmbed = new MessageEmbed()
             .setColor(client.EmbedColor)
             .setTitle("새문의")
             .setThumbnail(client.user.displayAvatarURL())
@@ -27,8 +25,8 @@ module.exports = {
             .setTimestamp(Date.now())
             .setFooter(`문의 작성자: ${message.author.tag}`, message.author.displayAvatarURL());
 
-        await admin.send(SupportEmbed);
+        await admin.send({ embeds: [SupportEmbed] });
         await message.react("✅");
-        await message.channel.send(SuccessEmbed);
+        await message.channel.send({ embeds: [SuccessEmbed] });
     }
 }

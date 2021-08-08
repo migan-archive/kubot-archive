@@ -4,7 +4,7 @@ module.exports = {
     name: "킥",
     aliases: ["추방", "kick"],
     async run(client, message, args) {
-        if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("당신은 이 명령어를 사용할 권한이 없습니다!");
+        if (!message.member.permissions.has("KICK_MEMBERS")) return message.channel.send("당신은 이 명령어를 사용할 권한이 없습니다!");
         const mentionMember = message.mentions.members.first();
         let reason = args.slice(1).join(" ");
         if (!reason) reason = " 없음";

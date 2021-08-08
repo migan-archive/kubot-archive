@@ -1,6 +1,6 @@
 require('dotenv').config();
-const Discord = require('discord.js');
-const client = new Discord.Client();
+const { Client, Collection, MessageEmbed } = require('discord.js');
+const client = new Client({ intents: ['GUILDS', 'GUILD_MESSAGES', 'DIRECT_MESSAGES'] });
 const fs = require('fs');
 const { prefix } = require('../config.json'); // 이 파일 안에 접두사를 넣으면 됩니다.
 const Dokdo = require('dokdo');
@@ -16,7 +16,7 @@ const DokdoHandler = new Dokdo(
   }
 );
 
-client.commands = new Discord.Collection();
+client.commands = new Collection();
 
 client.EmbedColor = "00FF21";
 
@@ -48,29 +48,30 @@ client.on('ready', () => {
 });
 
 
-client.on('message', msg => {
+client.on('messageCreate', msg => {
   if (msg.author.bot || msg.channel.type == "dm") return;
   DokdoHandler.run(msg);
   if (msg.content.includes(`<@!${client.user.id}>`)) {
-    const Embed = new Discord.MessageEmbed()
+    const developer = client.users.cache.get(client.owners);
+    const Embed = new MessageEmbed()
       .setColor(client.EmbedColor)
       .setTitle(`${client.user.username}이에요!`)
-      .setDescription(`저의 접두사는 \`${prefix}\`이에요!\n\`${prefix}도움말\`로 명령어를 확인해 주세요!\n개발자: ! 미간 !#8269`)
+      .setDescription(`저의 접두사는 \`${prefix}\`이에요!\n\`${prefix}도움말\`로 명령어를 확인해 주세요!\n개발자: ${developer.tag}`)
       .setTimestamp(Date.now())
       .setFooter(msg.author.tag, msg.author.displayAvatarURL());
-    msg.reply(Embed);
+    msg.reply({ embeds: [Embed] });
   };
 
   if (msg.content === "쿠봇아 안녕" || msg.content === "쿠봇아 안뇽" || msg.content === "쿠봇아 하이") {
     const list = ["안녕", "hi", "안녕하세요", "hello", "좋은아침이에요!"];
-    const random = Math.floor(Math.random() * 5);
+    const random = Math.floor(Math.random() * list.length);
     const hello = list[random];
     msg.reply(hello);
   };
 
   if (msg.content === "쿠봇아 놀자") {
     const list = ["바빠", "뭐하고 놀건데?"];
-    const random = Math.floor(Math.random() * 2);
+    const random = Math.floor(Math.random() * list.length);
     const enjoy = list[random];
     msg.reply(enjoy);
   };
@@ -79,7 +80,7 @@ client.on('message', msg => {
   if (msg.content === "쿠봇아 바보") return msg.reply("바보 아닌데요");
   if (msg.content === "쿠봇아 야") {
     const list = ["뭐", "왜"];
-    const random = Math.floor(Math.random() * 2);
+    const random = Math.floor(Math.random() * list.length);
     const hey = list[random];
     msg.reply(hey);
   };

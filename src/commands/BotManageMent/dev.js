@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 const pretty = require('pretty-ms');
 
 module.exports = {
@@ -10,7 +10,7 @@ module.exports = {
         const os = require('os');
 
         let modules = require(process.cwd() + "/package.json");
-        const Embed = new Discord.MessageEmbed()
+        const Embed = new MessageEmbed()
             .setColor(client.EmbedColor)
             .setTitle('개발 정보')
             .setThumbnail(client.user.displayAvatarURL())
@@ -67,6 +67,6 @@ module.exports = {
             } else return string;
         }
 
-        message.channel.send(Embed);
+        message.reply({ embeds: [Embed] });
     }
 }
