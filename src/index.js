@@ -55,7 +55,7 @@ client.on('message', msg => {
     const Embed = new Discord.MessageEmbed()
       .setColor(client.EmbedColor)
       .setTitle(`${client.user.username}이에요!`)
-      .setDescription(`저의 접두사는 \`${prefix}\`이에요!\n\`${prefix}도움말\`로 명령어를 확인해 주세요!`)
+      .setDescription(`저의 접두사는 \`${prefix}\`이에요!\n\`${prefix}도움말\`로 명령어를 확인해 주세요!\n개발자: ! 미간 !#8269`)
       .setTimestamp(Date.now())
       .setFooter(msg.author.tag, msg.author.displayAvatarURL());
     msg.reply(Embed);
