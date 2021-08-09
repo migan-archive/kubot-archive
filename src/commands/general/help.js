@@ -34,7 +34,7 @@ module.exports = {
                 },
                 {
                     name: "소스코드",
-                    value: "[깃허브](https://github.com/siwoo131/kubot-code)"
+                    value: `[깃허브](https://github.com/siwoo131/kubot-code)\n만약 봇 소스코드 사용시 ${Developer.tag}로 문의 부탁드려요.`
                 },
                 {
                     name: "핑",
