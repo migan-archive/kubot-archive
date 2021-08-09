@@ -46,7 +46,7 @@ module.exports = {
                 },
                 {
                     name: "현재 공지",
-                    value: "퀴즈 명령어가 새로 생겼습니다!"
+                    value: "없음"
                 },
                 {
                     name: "업타임",
@@ -62,11 +62,11 @@ module.exports = {
                 },
                 {
                     name: "관리",
-                    value: "`밴(차단, ban), 킥(추방, kick)`, `청소(채팅청소, clear)`"
+                    value: "`밴(차단, ban)`, `킥(추방, kick)`, `청소(채팅청소, clear)`"
                 },
                 {
                     name: "유틸리티",
-                    value: "`핑(ping)`, `프로필(proflie`, `유저정보`, `userinfo, (ui)`, `랜덤숫자`, `따라해`, `업타임(uptime)`"
+                    value: "`핑(ping)`, `프로필(proflie, 유저정보, userinfo, ui)`, `랜덤숫자`, `따라해`, `업타임(uptime)`"
                 },
                 {
                     name: "봇 개발자 전용 명령어",
