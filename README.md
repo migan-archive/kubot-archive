@@ -58,4 +58,4 @@ yarn start
 npm start
 ```
 
-- 만약 에러가 난다면 [모듈설치](https://github.com/siwoo131/kubot-code#모듈설치)부터 다시 시작해 주세요.
+- 만약 에러가 난다면 [모듈 설치](https://github.com/siwoo131/kubot-code#https://github.com/siwoo131/kubot-code#모듈-설치)부터 다시 시작해 주세요.
