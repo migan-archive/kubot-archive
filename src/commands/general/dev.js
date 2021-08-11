@@ -2,10 +2,10 @@ const { MessageEmbed } = require('discord.js');
 const pretty = require('pretty-ms');
 
 module.exports = {
-    name: "dev",
-    aliases: ["DEV", "Dev"],
+    name: "정보",
+    aliases: ["info", "Info"],
     async run(client, message, args) {
-        if (message.author.id !== client.owners) return message.reply('어라? 당신은 개발자가 아닌데요?');
+        // if (message.author.id !== client.owners) return message.reply('어라? 당신은 개발자가 아닌데요?');
 
         const os = require('os');
 
