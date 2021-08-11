@@ -8,19 +8,18 @@
 
 ## 사용된 node.js 버전
 
-| 운영체제, 서버           | 버전    |
-| ------------------------ | ------- |
-| ubuntu 20.04.2 LTS (WSL) | 14.17.4 |
-| heroku                   | 14.17.4 |
+| 운영체제, 서버           | 버전   |
+| ------------------------ | ------ |
+| ubuntu 20.04.2 LTS (WSL) | 16.6.1 |
+| heroku                   | 없음   |
 
 ## 사용된 라이브러리
 
 | 라이브러리 이름 | 버전   |
 | --------------- | ------ |
-| discord.js      | 12.5.3 |
-| dokdo           | 0.4.1  |
+| discord.js      | 13.0.1 |
+| dokdo           | 0.4.0  |
 | dotenv          | 10.0.0 |
-| koreanbots      | 2.0.12 |
 | nodemon         | 2.0.12 |
 | pretty-ms       | 7.0.1  |
 
@@ -39,6 +38,8 @@
 
 - 주의! 만약 node.js 버젼이 14이하라면 dokdo커맨드가 작동을 안합니다.
 
+- 주의! 만약 node.js 버젼이 16.6이하라면 discord.js가 작동을 안합니다.
+
 1. 윈도우라면 node.js 공식 홈페이지에 가서 다운받으십시오
 2. 리눅스라면 터미널에 아래에 있는 명령어를 치십시오.
 
@@ -51,7 +52,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 그리고
 
 ```zsh
-nvm install 14.17.4
+nvm install 16.6.1
 ```
 
 를 쳐주세요. (최신버전)

@@ -46,7 +46,7 @@ module.exports = {
                 },
                 {
                     name: "현재 공지",
-                    value: "없음"
+                    value: "v13으로 이전을 했습니다. 따라서 다음과 같은 명령어를 사용 못합니다.\n퀴즈\n따라해"
                 },
                 {
                     name: "업타임",
@@ -54,7 +54,7 @@ module.exports = {
                 },
                 {
                     name: "재미",
-                    value: "`퀴즈(quiz, QUIZ)`"
+                    value: "~~`퀴즈(quiz, QUIZ)`~~"
                 },
                 {
                     name: "일반",
@@ -66,7 +66,7 @@ module.exports = {
                 },
                 {
                     name: "유틸리티",
-                    value: "`핑(ping)`, `프로필(proflie, 유저정보, userinfo, ui)`, `랜덤숫자`, `따라해`, `업타임(uptime)`"
+                    value: "`핑(ping)`, `프로필(proflie`, `유저정보`, `userinfo, (ui)`, `랜덤숫자`, ~~`따라해`~~, `업타임(uptime)`"
                 },
                 {
                     name: "봇 개발자 전용 명령어",
@@ -79,6 +79,6 @@ module.exports = {
             )
             .setTimestamp(Date.now())
             .setFooter(message.author.tag, message.author.displayAvatarURL());
-        message.channel.send(Embed);
+        message.reply({ embeds: [Embed] });
     }
 }
