@@ -4,111 +4,58 @@
 [![Servers](https://koreanbots.dev/api/widget/bots/servers/704999866094452816.svg?style=classic&scale=1.5)](https://koreanbots.dev/bots/704999866094452816)
 [![Status](https://koreanbots.dev/api/widget/bots/status/704999866094452816.svg?style=classic&scale=1.5)](https://koreanbots.dev/bots/704999866094452816)
 
-- 개발 할때 쓴 node.js버전, 라이브러리 버전을 적어두었습니다.
-
-## 사용된 node.js 버전
-
-| 운영체제, 서버           | 버전   |
-| ------------------------ | ------ |
-| ubuntu 20.04.2 LTS (WSL) | 16.6.1 |
-| heroku                   | 16.6.1 |
-
-## 사용된 라이브러리
-
-| 라이브러리 이름 | 버전                           |
-| --------------- | ------------------------------ |
-| discord.js      | 13.0.1                         |
-| dokdo           | mome0320/dokdo#support-djs-v13 |
-| dotenv          | 10.0.0                         |
-| nodemon         | 2.0.12                         |
-| pretty-ms       | 7.0.1                          |
-
-## 사용하실때
-
-사용하실때 가이드입니다.
+## 가이드
 
 ### 라이선스
 
-- 해당봇은 MIT 라이선스를 사용중입니다.
-- 아무렇게나 써도됩니다.
+MIT 라이선스를 사용하고 있습니다.
 
-### node.js 설치법
+### 폴더 내려받기
 
-- 주의! 만약 node.js 버젼이 12이하라면 Embed가 작동을 안합니다.
+- 이봇은 node.js 버젼 16.6.1 이 권장 됩니다.
 
-- 주의! 만약 node.js 버젼이 14이하라면 dokdo커맨드가 작동을 안합니다.
-
-- 주의! 만약 node.js 버젼이 16.6이하라면 discord.js가 작동을 안합니다.
-
-1. 윈도우라면 node.js 공식 홈페이지에 가서 다운받으십시오
-2. 리눅스라면 터미널에 아래에 있는 명령어를 치십시오.
-
-- 이 설치법은 nvm을 설치하여 node.js를 설치합니다. 그리고 ubuntu 기준입니다. (방법2)
-
-```zsh
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
-```
-
-그리고
-
-```zsh
-nvm install 16.6.1
-```
-
-를 쳐주세요. (최신버전)
-
-## 폴더 받기
-
-아래의 명령어를 쳐주세요.
-
-```zsh
+```sh
 git clone https://github.com/siwoo131/kubot-code.git
 ```
 
-## 라이브러리 설치법
+### 모듈 설치
 
-- 아래 명령어를 쳐주세요!
-- 봇실행 파일이 있는곳에서 설치해 주세요!
-- npm
+이봇을 정상적으로 돌릴려면 패키지를 설치해야 합니다.
 
-```zsh
-npm install
-```
+- yarn (추천함)
 
-- yarn
-
-```zsh
+```sh
 yarn
 ```
 
-### 사용법
-
-1. 프로젝트 폴더 안에서 .env 를 만들고 아래처럼 해주세요.
-
-- 이 방법은 ubuntu 외에선 테스트를 안해 보았습니다.
-
-```
-TOKEN = 'YOUR_BOT_TOKEN'
-```
-
-3. Procfile, Aptfile은 없애주시고 (원한다면 .gitignore 도 없애도됨) 사용해 주세요.
-
-- 코드를 변형해서 사용 하셔도 됩니다.
-
-3. 그리고 다하셨다면 콘솔창에다가 아래의 문구를 써주세요.
-
 - npm
 
-```zsh
-npm run start
+```sh
+npm i
 ```
 
-- yarn
+### 봇실행
 
-```zsh
+1. 봇실행을 할려면 파일을 하나 만들어야 합니다. 프로젝트 최상단 디렉토리에 .env 파일을 만드십시오.
+
+2. 그리고 아래를 복사해서 붙여넣으시고 토큰은 봇의 토큰을 넣으십시오.
+
+```
+TOKEN = 'DISCORD_BOT_TOKEN'
+```
+
+3. 이제 봇실행을 할 준비가 되었습니다. 아래의 구분으로 봇을 실행하십시오.
+
+- yarn (추천함)
+
+```
 yarn start
 ```
 
-4. 이봇은 commandHandler 로 파일을 나누어 놓았습니다. 봇의 커맨드를 바꾸실려면 src/commands 폴더안 .js 파일을 수정해 주세요.
+- npm
 
-5. 그리고 숨김폴더로 .git이 있을텐데 그것도 없애주세요.
+```
+npm start
+```
+
+- 만약 에러가 난다면 [모듈설치](https://github.com/siwoo131/kubot-code#모듈설치)부터 다시 시작해 주세요.
