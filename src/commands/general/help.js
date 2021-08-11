@@ -54,7 +54,7 @@ module.exports = {
                 },
                 {
                     name: "재미",
-                    value: "`퀴즈(quiz, QUIZ)`"
+                    value: "~~`퀴즈(quiz, QUIZ)`~~"
                 },
                 {
                     name: "일반",
@@ -66,7 +66,7 @@ module.exports = {
                 },
                 {
                     name: "유틸리티",
-                    value: "`핑(ping)`, `프로필(proflie`, `유저정보`, `userinfo, (ui)`, `랜덤숫자`, `따라해`, `업타임(uptime)`"
+                    value: "`핑(ping)`, `프로필(proflie`, `유저정보`, `userinfo, (ui)`, `랜덤숫자`, ~~`따라해`~~, `업타임(uptime)`"
                 },
                 {
                     name: "봇 개발자 전용 명령어",
