@@ -12,15 +12,15 @@ module.exports = {
             .addFields(
                 {
                     name: "이름",
-                    value: user.username
+                    value: `${user.username}`
                 },
                 {
                     name: "가입일",
-                    value: new Date(user.createdTimestamp).toLocaleDateString('ko-KR', { timeZone: 'Asia/Seoul' })
+                    value: `${new Date(user.createdTimestamp).toLocaleDateString('ko-KR', { timeZone: 'Asia/Seoul' })}`
                 },
                 {
                     name: "ID",
-                    value: user.id
+                    value: `${user.id}`
                 },
                 {
                     name: "상태",
@@ -28,7 +28,7 @@ module.exports = {
                 },
                 {
                     name: "봇여부",
-                    value: user.bot
+                    value: `${user.bot}`
                 }
             )
             .setTimestamp(Date.now())

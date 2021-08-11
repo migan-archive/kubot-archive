@@ -301,7 +301,7 @@ discord.js@^13.0.1:
     node-fetch "^2.6.1"
     ws "^7.5.1"
 
-"dokdo@github:mome0320/dokdo#support-djs-v13":
+dokdo@mome0320/dokdo#support-djs-v13:
   version "0.4.1"
   resolved "https://codeload.github.com/mome0320/dokdo/tar.gz/4131977e0e085f9fe1c746d59fafab8158c99865"
   dependencies:
