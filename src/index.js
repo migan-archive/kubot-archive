@@ -61,34 +61,6 @@ client.on('messageCreate', msg => {
       .setFooter(msg.author.tag, msg.author.displayAvatarURL());
     msg.reply({ embeds: [Embed] });
   };
-
-  if (msg.content === "쿠봇아 안녕" || msg.content === "쿠봇아 안뇽" || msg.content === "쿠봇아 하이") {
-    const list = ["안녕", "hi", "안녕하세요", "hello", "좋은아침이에요!"];
-    const random = Math.floor(Math.random() * list.length);
-    const hello = list[random];
-    msg.reply(hello);
-  };
-
-  if (msg.content === "쿠봇아 놀자") {
-    const list = ["바빠", "뭐하고 놀건데?"];
-    const random = Math.floor(Math.random() * list.length);
-    const enjoy = list[random];
-    msg.reply(enjoy);
-  };
-
-  if (msg.content === "쿠봇아 뭐해") return msg.reply("저는 사람들이랑 대화중이에요!");
-  if (msg.content === "쿠봇아 바보") return msg.reply("바보 아닌데요");
-  if (msg.content === "쿠봇아 야") {
-    const list = ["뭐", "왜"];
-    const random = Math.floor(Math.random() * list.length);
-    const hey = list[random];
-    msg.reply(hey);
-  };
-
-  if (msg.content === "쿠봇아 바이") return msg.reply("안녕히 계세요!");
-  if (msg.content === "쿠봇아 인성문제있어?") return msg.reply("아닙니다");
-  if (msg.content === "쿠봇아 아라아라해줘") return msg.reply("미쳤습니까 휴먼?");
-
   if (!msg.content.startsWith(prefix)) return;
   if (msg.content.slice(0, prefix.length) !== prefix) return;
 
@@ -99,7 +71,7 @@ client.on('messageCreate', msg => {
 
   if (!cmd) return;
 
-  if (cmd) cmd.run(client, msg, args); /* 나중에 핑퐁 빌더로 대화 기능 수정할껍니다. */
+  if (cmd) cmd.run(client, msg, args);
 });
 
 

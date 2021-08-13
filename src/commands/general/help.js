@@ -46,7 +46,7 @@ module.exports = {
                 },
                 {
                     name: "현재 공지",
-                    value: "v13으로 이전을 했습니다. 따라서 다음과 같은 명령어를 사용 못합니다.\n퀴즈\n따라해"
+                    value: "대화기능을 없앴습니다. 나중에 더 품질좋은 대화기능으로 돌아오겠습니다."
                 },
                 {
                     name: "업타임",
@@ -71,10 +71,6 @@ module.exports = {
                 {
                     name: "봇 개발자 전용 명령어",
                     value: "`dokdo(dok, Dok, debug, debugging, Dokdo, 독도)`, `eval(Eval, 이발)`"
-                },
-                {
-                    name: `${client.user.username}이랑 대화 하고 싶다면 \`쿠봇아 \`를 붙혀 주세요!`,
-                    value: `ex) 쿠봇아 안녕`
                 }
             )
             .setTimestamp(Date.now())
