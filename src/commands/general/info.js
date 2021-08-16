@@ -1,18 +1,15 @@
 const { MessageEmbed } = require('discord.js');
 const pretty = require('pretty-ms');
+const os = require('os');
 
 module.exports = {
     name: "정보",
     aliases: ["info", "Info"],
     async run(client, message, args) {
-        // if (message.author.id !== client.owners) return message.reply('어라? 당신은 개발자가 아닌데요?');
-
-        const os = require('os');
-
         let modules = require(process.cwd() + "/package.json");
         const Embed = new MessageEmbed()
             .setColor(client.EmbedColor)
-            .setTitle('개발 정보')
+            .setTitle('정보')
             .setThumbnail(client.user.displayAvatarURL())
             .addFields(
                 {

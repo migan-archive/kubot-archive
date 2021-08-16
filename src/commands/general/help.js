@@ -1,25 +1,35 @@
-const Discord = require('discord.js');
+const { MessageEmbed, MessageActionRow, MessageButton } = require('discord.js');
 const pretty = require('pretty-ms');
+const { prefix } = require(process.cwd() + '/config.json');
 
 module.exports = {
     name: "도움말",
     aliases: ["help", "도움", "명령어", "commands", "HELP"],
     run(client, message, args) {
         const Developer = client.users.cache.get(client.owners);
-        const Embed = new Discord.MessageEmbed()
+        const row = new MessageActionRow()
+            .addComponents(
+                new MessageButton()
+                    .setLabel('공식 디스코드')
+                    .setStyle('LINK')
+                    .setURL('https://discord.gg/S8pN4eD')
+            ).addComponents(
+                new MessageButton()
+                    .setLabel('봇초대')
+                    .setStyle('LINK')
+                    .setURL('https://discord.com/oauth2/authorize?client_id=704999866094452816&permissions=8&scope=bot')
+            ).addComponents(
+                new MessageButton()
+                    .setLabel('사이트')
+                    .setStyle('LINK')
+                    .setURL('https://kubot.netlify.app/')
+            );
+        const Embed = new MessageEmbed()
             .setThumbnail(client.user.displayAvatarURL())
             .setTitle(`${client.user.username}의 도움말`)
-            .setDescription("봇 접두사=**`--`**")
+            .setDescription(`당신의 디스코드방을 편리하게 만듭니다.\n봇 접두사=**\`${prefix}\`**`)
             .setColor(client.EmbedColor)
             .addFields(
-                {
-                    name: "당신의 디스코드방을 편리하게 만듭니다.",
-                    value: "[공식 디스코드 바로가기](https://discord.gg/S8pN4eD)\n[공식 사이트 바로가기](https://kubot.netlify.app/)"
-                },
-                {
-                    name: "봇초대",
-                    value: "[초대하러 가기](https://discord.com/oauth2/authorize?client_id=704999866094452816&permissions=8&scope=bot)"
-                },
                 {
                     name: "서버수",
                     value: `현재 ${client.user.username}의 서버수는 ${client.guilds.cache.size}서버 입니다.`
@@ -75,6 +85,6 @@ module.exports = {
             )
             .setTimestamp(Date.now())
             .setFooter(message.author.tag, message.author.displayAvatarURL());
-        message.reply({ embeds: [Embed] });
+        message.reply({ embeds: [Embed], components: [row] });
     }
 }
