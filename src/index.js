@@ -45,6 +45,8 @@ client.on('ready', () => {
   console.log("Author: 미간#8269"); // 이건 수정 하시면 안됩니다.
   console.log("======================================");
   client.user.setActivity(`${prefix}도움말`, { type: "PLAYING" });
+  client.commands.delete('따라해');
+  client.commands.delete('퀴즈');
 });
 
 
