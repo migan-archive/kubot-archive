@@ -1,6 +1,6 @@
 require('dotenv').config();
 const { Client, Collection } = require('discord.js');
-const client = new Client({ intents: ['GUILDS', 'GUILD_MESSAGES', 'DIRECT_MESSAGES'] });
+const client = new Client({ intents: ['GUILDS', 'GUILD_MESSAGES', 'DIRECT_MESSAGES', 'GUILD_MEMBERS', 'GUILD_PRESENCES'] });
 const fs = require('fs');
 const { prefix } = require('../config.json'); // 이 파일 안에 접두사를 넣으면 됩니다.
 const Dokdo = require('dokdo');
