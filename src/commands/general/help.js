@@ -25,7 +25,7 @@ module.exports = {
                     .setURL('https://kubot.netlify.app/')
             ).addComponents(
                 new MessageButton()
-                    .setLabel(`깃허브(만약 봇 소스코드 사용시 ${Developer.tag}로 문의 부탁드려요.)`)
+                    .setLabel(`소스코드(만약 봇 소스코드 사용시 ${Developer.tag}로 문의 부탁드려요.)`)
                     .setStyle('LINK')
                     .setURL('https://github.com/siwoo131/kubot-code')
             );
