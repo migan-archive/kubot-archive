@@ -6,12 +6,18 @@ module.exports = {
     name: "정보",
     aliases: ["info", "Info"],
     async run(client, message, args) {
+        const developer = client.users.cache.get(client.owners);
         let modules = require(process.cwd() + "/package.json");
         const Embed = new MessageEmbed()
             .setColor(client.EmbedColor)
             .setTitle('정보')
             .setThumbnail(client.user.displayAvatarURL())
             .addFields(
+                {
+                    name: '개발자',
+                    value: `\`${developer.tag}\``,
+                    inline: true
+                },
                 {
                     name: "Node.js 버젼",
                     value: `\`${process.version}\``,
