@@ -1,5 +1,6 @@
 module.exports = {
     name: "리로드",
+    aliases: ['reload'],
     async run(client, message, args) {
         if (message.author.id !== client.owners) return message.reply('어라? 당신은 개발자가 아닌데요?');
         if (!args[0]) return message.reply('인수가 누락되었습니다.');
