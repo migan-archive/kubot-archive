@@ -1,0 +1,12 @@
+# ide
+.vscode/
+
+# module
+node_modules/
+
+# logs
+output.log
+
+# ...
+Procfile
+Aptfile
