@@ -1,5 +1,6 @@
 # Kubot
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/64115430232d4cb9a5ee4319f57c72bf)](https://app.codacy.com/gh/siwoo131/kubot-code?utm_source=github.com&utm_medium=referral&utm_content=siwoo131/kubot-code&utm_campaign=Badge_Grade_Settings)
 [![Votes](https://koreanbots.dev/api/widget/bots/votes/704999866094452816.svg?style=classic&scale=1.5)](https://koreanbots.dev/bots/704999866094452816)
 [![Servers](https://koreanbots.dev/api/widget/bots/servers/704999866094452816.svg?style=classic&scale=1.5)](https://koreanbots.dev/bots/704999866094452816)
 [![Status](https://koreanbots.dev/api/widget/bots/status/704999866094452816.svg?style=classic&scale=1.5)](https://koreanbots.dev/bots/704999866094452816)
