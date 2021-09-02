@@ -10,3 +10,7 @@ output.log
 # ...
 Procfile
 Aptfile
+.git
+
+# env
+.env

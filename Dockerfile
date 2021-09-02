@@ -5,4 +5,6 @@ WORKDIR /app
 COPY . .
 RUN yarn
 
+ENV SHELL=/bin/bash
+
 CMD ["yarn", "start"]
