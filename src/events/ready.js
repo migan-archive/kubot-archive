@@ -4,9 +4,6 @@ module.exports = {
     execute(client) {
         console.log(client.commands.map(c => c.name).join(', ') + ' Load Success');
         console.log(`Login: ${client.user.username}`);
-        console.log("Licence: MIT");
-        console.log("Author: Migan#8269"); // 이건 수정 하시면 안됩니다.
-        console.log(`prefix: ${client.prefix}`)
         console.log("======================================");
         client.user.setActivity(`${client.prefix}도움말`, { type: "PLAYING" });
     },

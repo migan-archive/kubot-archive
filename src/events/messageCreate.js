@@ -5,7 +5,7 @@ module.exports = {
     execute(msg, client) {
         if (msg.author.bot || msg.channel.type == "dm") return;
         client.DokdoHandler.run(msg);
-        if (msg.content.includes(`<@!${client.user.id}>`)) {
+        if (msg.content.includes(`<@!${client.user.id}>`) || msg.content.includes(`<@${client.user.id}>`)) {
             const developer = client.users.cache.get(client.owners);
             const Embed = new MessageEmbed()
                 .setColor(client.EmbedColor)
@@ -13,7 +13,6 @@ module.exports = {
                 .setDescription(`저의 접두사는 \`${client.prefix}\`이에요!\n\`${client.prefix}도움말\`로 명령어를 확인해 주세요!\n개발자: ${developer.tag}`)
                 .setTimestamp(Date.now())
                 .setFooter(msg.author.tag, msg.author.displayAvatarURL());
-            msg.react('<:kubot:876717549742600193>');
             msg.reply({ embeds: [Embed] });
         };
         if (!msg.content.startsWith(client.prefix)) return;
