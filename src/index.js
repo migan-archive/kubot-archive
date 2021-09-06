@@ -1,9 +1,16 @@
 require('dotenv').config();
+const { Koreanbots } = require("koreanbots");
 const { Client, Collection } = require('discord.js');
 const client = new Client({ intents: ['GUILDS', 'GUILD_MESSAGES', 'DIRECT_MESSAGES', 'GUILD_MEMBERS', 'GUILD_PRESENCES'] });
 const fs = require('fs');
 const { prefix } = require('../config.json'); // 이 파일 안에 접두사를 넣으면 됩니다.
 const Dokdo = require('dokdo');
+const koreanbots = new Koreanbots({
+  api: {
+    token: process.env.KRBOTS_TOKEN
+  },
+  clientID: '704999866094452816' // 여기엔 자신의 봇 아이디를 적어주세요.
+})
 client.prefix = prefix;
 client.DokdoHandler = new Dokdo(
   client,
@@ -19,6 +26,10 @@ client.DokdoHandler = new Dokdo(
 client.commands = new Collection();
 client.EmbedColor = "00FF21";
 client.owners = "415135882006495242"; // 여기 있는 오너 아이디를 바꿔주셔야 합니다. 
+
+client.serverUpdate = servers => koreanbots.mybot.update({ servers, shards: client.shard?.count })
+  .then(res => console.log("서버 수를 정상적으로 업데이트하였습니다!\n반환된 정보:" + JSON.stringify(res)))
+  .catch(console.error)
 
 const eventFiles = fs.readdirSync(__dirname + '/events').filter(file => file.endsWith('.js'));
 
