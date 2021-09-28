@@ -1,7 +1,12 @@
-const { MessageEmbed } = require('discord.js')
+const { MessageEmbed, Message, Client } = require('discord.js')
 
 module.exports = {
   name: 'messageCreate',
+  /**
+   *
+   * @param {Message} msg
+   * @param {Client} client
+   */
   execute(msg, client) {
     if (msg.author.bot || msg.channel.type == 'dm') return
     client.DokdoHandler.run(msg)

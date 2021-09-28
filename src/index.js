@@ -1,17 +1,10 @@
 require('dotenv').config()
 const { Koreanbots } = require('koreanbots')
-const { Client, Collection } = require('discord.js')
+const { Client, Collection, Intents } = require('discord.js')
 const client = new Client({
-  intents: [
-    'GUILDS',
-    'GUILD_MESSAGES',
-    'DIRECT_MESSAGES',
-    'GUILD_MEMBERS',
-    'GUILD_PRESENCES',
-  ],
+  intents: Object.keys(Intents.FLAGS),
 })
 const fs = require('fs')
-const { prefix } = require('../config.json') // 이 파일 안에 접두사를 넣으면 됩니다.
 const Dokdo = require('dokdo')
 const koreanbots = new Koreanbots({
   api: {
@@ -19,7 +12,7 @@ const koreanbots = new Koreanbots({
   },
   clientID: '704999866094452816', // 여기엔 자신의 봇 아이디를 적어주세요.
 })
-client.prefix = prefix
+client.prefix = require('../config.json').prefix
 client.DokdoHandler = new Dokdo(client, {
   aliases: ['dokdo', 'dok', '독도', 'debug', 'debugging', 'Dok', 'Dokdo'],
   prefix: client.prefix,
