@@ -1,5 +1,5 @@
 # Kubot
-
+- 중요공지: 이 레포는 더이상 안쓰입니다. [여기로 오십시오](https://github.com/Migan178/kubot)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/64115430232d4cb9a5ee4319f57c72bf)](https://app.codacy.com/gh/siwoo131/kubot-code?utm_source=github.com&utm_medium=referral&utm_content=siwoo131/kubot-code&utm_campaign=Badge_Grade_Settings)
 [![Votes](https://koreanbots.dev/api/widget/bots/votes/704999866094452816.svg?style=classic&scale=1.5)](https://koreanbots.dev/bots/704999866094452816)
 [![Servers](https://koreanbots.dev/api/widget/bots/servers/704999866094452816.svg?style=classic&scale=1.5)](https://koreanbots.dev/bots/704999866094452816)
@@ -16,7 +16,7 @@ MIT 라이선스를 사용하고 있습니다.
 - 이봇은 node.js 버젼 16.6.1 이 권장 됩니다.
 
 ```sh
-git clone https://github.com/siwoo131/kubot-code.git
+git clone https://github.com/Migan178/kubot-code.git
 ```
 
 ### 모듈 설치
@@ -59,4 +59,4 @@ yarn start
 npm start
 ```
 
-- 만약 에러가 난다면 [모듈 설치](https://github.com/siwoo131/kubot-code#https://github.com/siwoo131/kubot-code#모듈-설치)부터 다시 시작해 주세요.
+- 만약 에러가 난다면 [모듈 설치](https://github.com/siwoo131/kubot-code#https://github.com/Migan178/kubot-code#모듈-설치)부터 다시 시작해 주세요.
